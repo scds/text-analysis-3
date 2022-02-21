@@ -10,6 +10,11 @@ has_toc: false
 
 ## Lesson Roadmap
 
+1. What is Topic Modelling?
+2. Topic Modelling with MALLET
+3. Topic Modelling with Gensim & NLTK
+4. Topic Modelling with R
+
 <hr />
 
 ## Lesson Format
