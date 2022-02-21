@@ -22,5 +22,5 @@ By the end of the lesson, learners will be able to:
 * Use at least one tool to perform topic modeling on a text corpus 
 * Explain the limitations of topic modeling
 
-
-Next -> Preparation
+<br />
+Next --> [Preparation](preparation.html)
