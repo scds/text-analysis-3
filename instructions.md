@@ -1,32 +1,29 @@
 ---
 layout: default
-title: Getting Started
+title: Lesson
 nav_order: 3
+has_children: true
+has_toc: false
 ---
 
-<!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
+# Topic Modelling
 
-<!--
+## Lesson Roadmap
 
-After ensuring that you've followed the [Preparatory steps](preparation), open Tableau and follow along with the workshop recording or slides. 
+<hr />
 
-## Workshop recording
+## Lesson Format
 
-<iframe height="480" width="853" allowfullscreen frameborder=0 src="https://echo360.ca/media/4378b2ec-7d0c-4632-a1e4-5a8076a494da/public?autoplay=false&automute=false"></iframe>
+The hands-on components of the lesson are available as videos with written instructions and screenshots of the video content below. If you are newer to programming, you are encouraged to watch the videos and use the written sections for later reference but feel free to approach the lesson however you prefer!
 
-View the original [here](https://echo360.ca/media/4378b2ec-7d0c-4632-a1e4-5a8076a494da/public).
+Note: with the exception of "[Topic Modelling with MALLET](mallet.html)" - wherein there are videos of its use on both Windows and Mac - the screenshots are taken on a Windows OS while the video is filmed on a Mac to provide most of our learners with recognizable examples (with apologies to Linux users!).
 
+<hr />
 
-## Workshop slides
+## Lesson Prerequisites
 
-<div style="position:relative;padding-top:66.25%;">
-<iframe src="//docs.google.com/viewer?url=https://github.com/scds/intro-tableau/raw/main/assets/docs/tableau_20201118.pdf?dl=0&hl=en_US&embedded=true" class="gde-frame" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" scrolling="no"></iframe>
-</div>
-[Download as a PDF](https://github.com/scds/intro-tableau/raw/main/assets/docs/tableau_20201118.pdf)
-<br>
+While a familiarity with basic programming concepts - such as variables, comments and the importance of correct syntax - will be an asset in completing the lesson, the videos explain the code in greater depth if you are newer to programming or a bit rusty. If you have programming experience, you will be able to move through the lesson quite quickly - you may wish to go directly to the [finished Python script](https://github.com/scds/text-analysis-3/blob/main/assets/tm.py).
 
-## Worksheets
-**Coming soon!**
+<br />
 
-
--->
+Next --> [What is Topic Modelling?](topic.html)
