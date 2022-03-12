@@ -13,11 +13,39 @@ Preparation for this tutorial consists of two steps: [Getting the data](#get-the
   
 ## Get the data
 
-The corpus we will be working with in the 
+The corpus we will be working with in the lesson is Frederick Douglass' "[My Bondage and My Freedom](https://www.gutenberg.org/files/202/202-h/202-h.htm)," available via Project Gutenberg. Save the web page as a text file (.txt file extension) and remove the preamble, table of contents, postscript and other text that we will be omitting from our topic model.
+
+With topic modelling, we would normally be working with a larger corpus - tens, hundres or even thousands of documents - but we will use a single document (with two parts) for the sake of speed and simplicity. Training machine learning systems with small datasets, of course, yields a coarser and brittler model. 
+
+<hr />
 
 ## Get the software
 
 This hands-on workshop uses several tools / programming languages to perform topic modelling: MALLET, Python and R. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you.
+
+[Download MALLET](https://mimno.github.io/Mallet/)
+
+[Download Anaconda](https://www.anaconda.com/products/individual)* (includes Spyder and R Studio, integrated development environments - or IDEs - for Python and R respectively).
+
+* If you completed the *[Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/)* workshop, you will already have downloaded Anaconda.
+
+**If you have programming experience with Python and / or R,** you are welcome to use the IDE you are familiar with as an alternative.
+
+Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
+
+<hr />
+
+### Software versions
+
+For the lesson as it is currently written, the software versions are as follows:
+
+**Python:** 3.9
+
+**Anaconda Navigator:** 2.1.2
+
+**Spyder:** 5.1.5
+
+<hr />
 
 ## Assemble your own corpus (optional)
 
