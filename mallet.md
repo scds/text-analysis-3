@@ -9,6 +9,9 @@ nav_order: 2
 
 ## About MALLET
 
+MALLET, or **MA**chine **L**earning for **L**anguag**E** **T**oolkit, is an open-source, Java-based package for performing machine learning tasks on texts such as information extraction or topic modelling.
+
+
 
 <hr />
 ## Using MALLET on a Mac
