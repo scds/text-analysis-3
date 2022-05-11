@@ -1,7 +1,7 @@
 # Topic Modelling
 Materials for the DMDS workshop: **Topic Modelling**  
 
-This repository contains workshop files, as well as files used to create the [workshop webpage](https://scds.githib.io/text-analysis-3) with GitHub Pages   
+This repository contains workshop files, as well as files used to create the [workshop webpage](https://scds.github.io/text-analysis-3) with GitHub Pages   
 
 
 Contributions by the following individuals: 
