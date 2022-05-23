@@ -15,7 +15,7 @@ Preparation for this tutorial consists of two steps: [Getting the data](#get-the
 
 The corpus we will be working with in the lesson is Frederick Douglass' "[My Bondage and My Freedom](https://www.gutenberg.org/files/202/202-h/202-h.htm)," available via Project Gutenberg. Save the web page as a text file (.txt file extension) and remove the preamble, table of contents, postscript and other text that we will be omitting from our topic model.
 
-With topic modelling, we would normally be working with a larger corpus - tens, hundres or even thousands of documents - but we will use a single document (with two parts) for the sake of speed and simplicity. Training machine learning systems with small datasets, of course, yields a coarser and brittler model. 
+With topic modelling, we would normally be working with a larger corpus - tens, hundres or even thousands of documents - but we will use a single document (with two parts) for the sake of speed and simplicity. Training machine learning systems with small datasets, of course, yields a coarser and brittler model that may not produce useful results outside of the context of its training (i.e. not generalizable to other datasets). 
 
 <hr />
 
