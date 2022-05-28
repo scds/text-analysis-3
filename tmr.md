@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Topic Modelling with R
+title: Topic Modeling with Voyant Tools
 parent: Lesson
-nav_order: 4
+nav_order: 2
 ---
 
-# Topic Modelling with R
+# Topic Modelling with Voyant Tools
 
 
 <br />
