@@ -5,7 +5,7 @@ parent: Lesson
 nav_order: 2
 ---
 
-# Topic Modelling with Voyant Tools
+# Topic Modeling with Voyant Tools
 
 
 <br />
