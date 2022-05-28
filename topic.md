@@ -5,9 +5,9 @@ parent: Lesson
 nav_order: 1
 ---
 
-# What is Topic Modelling?
+# What is Topic Modlling?
 
-## Exploratory data analysis with topic modelling
+## Exploratory data analysis with topic modeling
 
 You can perform topic modelling in Voyant Tools using the "Topics" tool. 
 
@@ -16,4 +16,4 @@ You can perform topic modelling in Voyant Tools using the "Topics" tool.
 ## On the Latent Dirichlet Allocation (LDA) algorithm
 
 <br />
-Next --> [Topic Modelling with Mallet](mallet.html)
+Next --> [Topic Modeling with Voyant Tools](tmv.html)
