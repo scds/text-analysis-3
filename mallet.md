@@ -2,7 +2,7 @@
 layout: default
 title: Topic Modelling with MALLET
 parent: Lesson
-nav_order: 2
+nav_order: 3
 ---
 
 # Topic Modelling with MALLET
