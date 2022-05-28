@@ -1,11 +1,11 @@
 ---
 layout: default
-title: What is Topic Modelling?
+title: What is Topic Modeling?
 parent: Lesson
 nav_order: 1
 ---
 
-# What is Topic Modlling?
+# What is Topic Modeling?
 
 ## Exploratory data analysis with topic modeling
 
