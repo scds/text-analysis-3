@@ -21,15 +21,17 @@ With topic modelling, we would normally be working with a larger corpus - tens, 
 
 ## Get the software
 
-This hands-on workshop uses several tools / programming languages to perform topic modelling: MALLET, Python and R. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you.
+This hands-on workshop uses several tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you.
+
+[Download Voyant Server](https://voyant-tools.org/docs/#!/guide/server)
 
 [Download MALLET](https://mimno.github.io/Mallet/)
 
-[Download Anaconda](https://www.anaconda.com/products/individual)* (includes Spyder and R Studio, integrated development environments - or IDEs - for Python and R respectively).
+[Download Anaconda](https://www.anaconda.com/products/individual)* (includes Spyder, integrated development environment - or IDE - for Python).
 
 * If you completed the *[Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/)* workshop, you will already have downloaded Anaconda.
 
-**If you have programming experience with Python and / or R,** you are welcome to use the IDE you are familiar with as an alternative.
+**If you have programming experience with Python,** you are welcome to use the IDE you are familiar with as an alternative.
 
 Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
 
