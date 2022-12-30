@@ -6,14 +6,14 @@ has_children: true
 has_toc: false
 ---
 
-# Topic Modelling
+# Topic Modeling
 
 ## Lesson Roadmap
 
-1. What is Topic Modelling?
-2. Topic Modelling with MALLET
-3. Topic Modelling with Gensim & NLTK
-4. Topic Modelling with R
+1. What is Topic Modeling?
+2. Topic Modeling with Voyant Tools
+3. Topic Modeling with MALLET
+4. Topic Modeling with Python (Gensim, NLTK and SpaCy)
 
 <hr />
 
@@ -21,7 +21,7 @@ has_toc: false
 
 The hands-on components of the lesson are available as videos with written instructions and screenshots of the video content below. If you are newer to programming, you are encouraged to watch the videos and use the written sections for later reference but feel free to approach the lesson however you prefer!
 
-Note: with the exception of "[Topic Modelling with MALLET](mallet.html)" - wherein there are videos of its use on both Windows and Mac - the screenshots are taken on a Windows OS while the video is filmed on a Mac to provide most of our learners with recognizable examples (with apologies to Linux users!).
+Note: with the exception of "[Topic Modelling with MALLET](mallet.html)" - wherein there are videos of its use on both Windows and Mac - the screenshots are taken on a Windows OS while the video is filmed on a Mac to provide most of our learners with recognizable examples (with apologies to Linux users for leaving Linux out!).
 
 <hr />
 
@@ -31,4 +31,4 @@ While a familiarity with basic programming concepts - such as variables, comment
 
 <br />
 
-Next --> [What is Topic Modelling?](topic.html)
+Next --> [What is Topic Modeling?](topic.html)
