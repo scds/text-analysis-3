@@ -27,7 +27,7 @@ Note: with the exception of "[Topic Modelling with MALLET](mallet.html)" - where
 
 ## Lesson Prerequisites
 
-While a familiarity with basic programming concepts - such as variables, comments and the importance of correct syntax - will be an asset in completing the lesson, the videos explain the code in greater depth if you are newer to programming or a bit rusty. If you have programming experience, you will be able to move through the lesson quite quickly - you may wish to go directly to the [finished Python script](https://github.com/scds/text-analysis-3/blob/main/assets/tm.py).
+While a familiarity with basic programming concepts - such as variables, comments and the importance of correct syntax - will be an asset in completing the lesson, the videos explain the code in greater depth if you are newer to programming or a bit rusty. If you have programming experience, you will be able to move through the lesson quite quickly - you may wish to go directly to the [finished Python script](https://github.com/scds/text-analysis-3/blob/main/assets/topic-model.py).
 
 <br />
 
