@@ -23,7 +23,7 @@ With topic modelling, we would normally be working with a larger corpus - tens, 
 
 ## Get the software
 
-This hands-on workshop uses several tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you.
+This hands-on workshop uses several tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you. You can skip this step for now, read ahead in the lesson and come back to the "Preparation" page to download applications as necessary.
 
 [Download Voyant Server](https://voyant-tools.org/docs/#!/guide/server)
 
@@ -31,7 +31,7 @@ This hands-on workshop uses several tools to perform topic modelling: Voyant Too
 
 [Download Anaconda](https://www.anaconda.com/products/individual)* (includes Spyder, integrated development environment - or IDE - for Python).
 
-* If you completed the *[Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/)* workshop, you will already have downloaded Anaconda.
+* If you completed the *[Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/)* workshop, you will already have downloaded Anaconda; you may wish to [update Anaconda](https://docs.anaconda.com/anaconda/install/update-version/) or [uninstall and reinstall it](https://docs.anaconda.com/anaconda/install/uninstall/) if you prefer / if you are getting an regarding setup-tools.
 
 **If you have programming experience with Python,** you are welcome to use the IDE you are familiar with as an alternative.
 
@@ -47,7 +47,7 @@ For the lesson as it is currently written, the software versions are as follows:
 
 **Anaconda Navigator:** 2.3.2
 
-**Spyder:** 5.1.5
+**Spyder:** 5.3.3
 
 <hr />
 
