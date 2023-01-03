@@ -7,9 +7,11 @@ nav_order: 1
 
 # What is Topic Modeling?
 
-In a digital scholarship context, topic modeling is typically used to get a sense of what a document, set of documents (corpus) or subset of documents is broadly about. “Documents” here could be articles, archives, web pages, tweets, transcripts of interviews and so on. 
+In a digital scholarship context, topic modeling is typically used to get a sense of what a document, set of documents (corpus) or subset of documents is about in a broad sense. “Documents” here could be articles, archives, web pages, tweets, transcripts of interviews and so on. 
 
-You may have used term frequencies - counting how many times a specific word or words appear in a corpus - for the same reasons. For example, in a political party's platform, the frequent appearance of words like "climate," "green" and "environment" may allow you to surmise that climate action is one of their priorities. However, while we humans can infer the semantic connections between the words "climate," "green" and "environment," a computer unless explicitly programmed. , the semantic. In a way, we are creating topic models  term frequencies can be . ; give example - board: a Board of Directors? To board a vessel? A board of wood, etc. 
+You may have used term frequencies - that is, counts of how many times a specific word or words appear in a corpus - for the same purpose. For example, in a political party's platform, the frequent mention of words like "climate," "green" and "environment" may allow you to hypothesize that climate action is one of their priorities. However, while we humans can infer the semantic relatedness of words like "climate," "green" and "environment," a computer cannot make the same connections between words unless explicitly programmed. Writing rules to capture every group of meaningful  would be . 
+
+Term frequencies can be less helpful without context. If "board" is one of the most commonly occurring words in the text, how is it intended: a Board of Directors? To board a vessel? A board of wood? And so on. Knowing that the word "board" often appears near "directors," "ship" or "hammer" would help  
 
 Topic modeling adds nuance by grouping terms (words) that appear in the text together to a greater degree than others; in a way, topic modeling creates a context in which to understand the term(s). Or, put another way:
 
