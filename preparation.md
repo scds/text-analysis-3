@@ -55,7 +55,7 @@ For the lesson as it is currently written, the software versions are as follows:
 
 **MALLET:** 202108
 
-If the versions differ from your own, that's ok! There's no need to track down older versions of the software. The steps should remain the same, but there might be some small variations that can be attributed to using a later version (with the exception of your Python version, which \*might\* break the code; Python 3.9 will be supported until October 2025).
+If the versions differ from your own, that's ok! There's no need to track down older versions of the software to complete the lesson. The steps should remain the same, but there might be some small variations that can be attributed to using a later version (with the exception of your Python version, which \*might\* break the code; Python 3.9 will be supported until October 2025).
 
 <hr />
 
