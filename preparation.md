@@ -66,4 +66,4 @@ In advance of the lesson, we also recommend that you assemble a collection of do
 If you have not already gone through your corpus to get a sense of what errors it might contain, now is a good time! If key words are misspelled, they may not be emerge as relevant themes through topic modelling.
 
 <br />
-Next --> Lesson: [Topic Modeling](instructions.html)
+Next --> [Start the Topic Modeling Lesson](instructions.html)
