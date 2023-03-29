@@ -24,16 +24,16 @@ import gensim.corpora as corpora
 from gensim.utils import simple_preprocess
 from gensim.models import CoherenceModel
 
-# Import external libraries: spaCy for lemmatization, NLTK for stopwords
-import spacy
-from nltk.corpus import stopwords
+# Import external libraries: spaCy for lemmatization and stopwords
+from spacy.lang.en import English                 # For other languages, refer to the SpaCy website: https://spacy.io/usage/models
+from spacy.lang.en.stop_words import STOP_WORDS   # Also need to update stopwords for other languages (e.g. spacy.lang.uk.stop_words for Ukrainian)
 
 # Import external libraries: pyLDA for vis
 import pyLDAvis
 import pyLDAvis.gensim_models as gensimvis
 
 # Read files from directory and create list from contents
-file_list = glob.glob('./russelltexts' + '/*.txt') # directory containing text (.txt) files
+file_list = glob.glob('./dir' + '/*.txt') # directory containing text (.txt) files
 
 texts = []
 
@@ -41,12 +41,19 @@ for filename in file_list:
     with open(filename, mode = 'r', encoding = 'mac-roman') as f: # specify encoding as appropriate
         texts.append(f.read())
 
-# Initialize stopwords
-stopwords = stopwords.words('english')
+# Print the first .txt file in the list to confirm files were read        
+# print(texts[0])
 
-custom_stopwords = ['so', 'such']
+# Print the initial set of stopwords from SpaCy
+# Also available at: https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py
+print(STOP_WORDS)
 
-stopwords.extend(custom_stopwords)
+# Add a word to remove or add from the list
+# STOP_WORDS.add("[word]") 
+# STOP_WORDS.remove("[word]")
+
+# Print again to confirm that your word has been added or removed
+# print(STOP_WORDS)
 
 # Lemmatize tokens
 def lemmatization(texts, allowed_postags=["NOUN", "ADJ", "VERB", "ADV"]):
@@ -64,7 +71,7 @@ def lemmatization(texts, allowed_postags=["NOUN", "ADJ", "VERB", "ADV"]):
 
 
 lemmatized_texts = lemmatization(texts)
-#print (lemmatized_texts[0][0:90])
+# print(lemmatized_texts[0][0:90])
 
 
 # Preprocess texts
@@ -77,7 +84,7 @@ def gen_words(texts):
 
 data_words = gen_words(lemmatized_texts)
 
-#print (data_words[0][0:20])
+# print(data_words[0][0:20])
 
 
 """
@@ -110,10 +117,11 @@ for text in data_words:
     new = id2word.doc2bow(text)
     corpus.append(new)
 
-#print (corpus[0][0:20])
+# print(corpus[0][0:20])
 
-#word = id2word[[0][:1][0]]
-#print (word)
+# Retrieve individual words from dictionary
+# word = id2word[[0][:1][0]]
+# print(word)
 
 # Specify number of topics (clusters of words)
 
@@ -131,7 +139,7 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 
 
 # Output visualization
-vis_data = gensimvis.prepare(lda_model, corpus, id2word)
+vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15)
 vis_data
 pyLDAvis.display(vis_data)
 pyLDAvis.save_html(vis_data, './topicVis' + str(num_topics) + '.html')
