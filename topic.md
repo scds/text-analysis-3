@@ -41,6 +41,10 @@ If you wish to supply your own list of stopwords to the jsLDA web application, y
 Topic modeling is approached based on the assumpution described by Ignatow & Mihalcea above: a text is split into segments of equal length, with the intention of . 
 It may be clear from our results with Mimno's tool that it would be difficult if not impossible to perform on texts at scale without computational means. At the same time, there are evident trade-offs in automating tasks through the use of general rules: words in a related topic may be split between segments and so, appear less related.
 
+## On the Latent Dirichlet Allocation (LDA) algorithm
+
+Many topic modeling approaches rely on the Latent Dirichlet Allocation algorithm, though it is not the only algorithm used to perform topic modeling (see also.
+
 
 
 <br />
