@@ -8,7 +8,7 @@ A script that:
 
 @author: D Mordell, largely modeled after William Mattingly's Jupyter notebook - https://github.com/wjbmattingly/topic_modeling_textbook/blob/main/03_03_lda_model_demo.ipnyb
 
-Preparation:
+Preparation (run commands in Spyder console):
 pip install gensim
 pip install spacy
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0-py3-none-any.whl
