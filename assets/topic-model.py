@@ -11,7 +11,7 @@ A script that:
 Preparation (run commands in Spyder console):
 pip install gensim
 pip install spacy
-pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0-py3-none-any.whl
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl (a more recent version may exist)
 pip install pyLDAvis
 """
 
