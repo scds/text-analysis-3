@@ -16,15 +16,15 @@ You can compare the results that you get from running the script in Jupyter Note
 Jump to step >
 
 1. [Install the required packages](#1-install-the-required-packages)
-2. Import internal and external libraries (i.e. dependencies)
-3. Read the files containing the text data
-4. Identify stopwords for the corpus
-5. Tokenize and lemmatize text data, and remove stopwords
-6. Preprocess texts using the Gensim library
-7. Create a dictionary of words used in the corpus
-8. Retrieve words from corpus dictionary
-9. Create topics in Gensim
-10. Create topic modeling visualization with LDAvis
+2. [Import internal and external libraries (i.e. dependencies)](#2-import-internal-and-external-libraries-ie-dependencies)
+3. [Read the files containing the text data](#3-read-the-files-containing-the-text-data)
+4. [Identify stopwords for the corpus](#4-identify-stopwords-for-the-corpus)
+5. [Tokenize and lemmatize text data, and remove stopwords](#5-tokenize-and-lemmatize-text-data-and-remove-stopwords)
+6. [Preprocess texts using the Gensim library](#6-preprocess-texts-using-the-gensim-library)
+7. [Create a dictionary of words used in the corpus](#7-create-a-dictionary-of-words-used-in-the-corpus)
+8. [Retrieve words from corpus dictionary](#8-retrieve-words-from-corpus-dictionary)
+9. [Create topics in Gensim](#9-create-topics-in-gensim)
+10. [Create topic modeling visualization with LDAvis](#10-create-topic-modeling-visualization-with-ldavis)
 
 <hr />
 
@@ -33,7 +33,20 @@ Jump to step >
 ## **1.** Install the required packages
 Our Python script is dependent on a few external packages that are not by default installed on . We must install them before we can start writing our script, as our next step is to import them!
 
-Type each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner.
+Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
+
+* Install Gensim
+`pip install gensim`
+
+* Install SpaCy
+`pip install spacy`
+
+* Install the trained language model from SpaCy (required to be able to use the SpaCy library): 
+`pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl`
+
+* Install pyLDAvis
+`pip install pyLDAvis`
+
 <hr />
 
 ## **2.** Import internal and external libraries (i.e. dependencies)
