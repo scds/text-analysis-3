@@ -15,7 +15,7 @@ You can compare the results that you get from running the script in Jupyter Note
 
 Jump to step >
 
-1. Install the required packages
+1. [Install the required packages](#1-install-the-required-packages)
 2. Import internal and external libraries (i.e. dependencies)
 3. Read the files containing the text data
 4. Identify stopwords for the corpus
