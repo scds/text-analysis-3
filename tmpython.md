@@ -31,6 +31,9 @@ Jump to step >
 <hr />
 
 ## **1.** Install the required packages
+Our Python script is dependent on a few external packages that are not by default installed on . We must install them before we can start writing our script, as our next step is to import them!
+
+Type each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner.
 <hr />
 
 ## **2.** Import internal and external libraries (i.e. dependencies)
