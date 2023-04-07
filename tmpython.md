@@ -35,16 +35,16 @@ Our Python script is dependent on a few external packages that are not by defaul
 
 Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
 
-* Install Gensim
+* Install Gensim<br>
 `pip install gensim`
 
-* Install SpaCy
+* Install SpaCy<br>
 `pip install spacy`
 
-* Install the trained language model from SpaCy (required to be able to use the SpaCy library): 
+* Install the trained language model from SpaCy (required to be able to use the SpaCy library)<br>
 `pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl`
 
-* Install pyLDAvis
+* Install pyLDAvis<br>
 `pip install pyLDAvis`
 
 <hr />
@@ -54,7 +54,7 @@ Now, we will start writing our script in the Spyder editor (left pane in the def
 
 After the initial code comments that Spyder provides for you (and which you can elaborate upon), type or copy / paste the following commands and comments:
 
-`   # Import internal libraries: glob for grabbing docs from directory
+    # Import internal libraries: glob for grabbing docs from directory
     import glob
 
     # Import external libraries: gensim for preprocessing and LDA
@@ -70,16 +70,20 @@ After the initial code comments that Spyder provides for you (and which you can 
 
     # Import external libraries: pyLDA for vis
     import pyLDAvis
-    import pyLDAvis.gensim_models as gensimvis`
+    import pyLDAvis.gensim_models as gensimvis
 
-You will note in the code above there is the option of working with texts in languages other than English. 
+You will note in the code above there is the option of working with texts in languages other than English.
+
+If you have not saved the script yet, go ahead and do so. Make a note of where you are saving the script, because you will as described below.
 
 <hr />
 
 ## **3.** Read the files containing the text data
-Our next step is to load our text files in a manner that they can be used. We will employ the [`glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. 
+Our next step is to load our text files in a manner that they can be used; i.e. storing them in a list data structure in Python. We will employ the [`glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. The `glob` library allows us to grab the contents of a directory using pattern matching.
 
-   `# Read files from directory and create list from contents
+In order to use the lines of code below, you will need to create a new directory (folder) in the folder that contains the python script you are creating called "corpus" and copy your text files to it. For the lines of code below to run, the files must end with the `.txt` file extension - a commonly used file format in text analysis. Alternatively, you can replace `'/*.txt'` below with `'/*.doc'` or `'/*.docx'` but all your text files must have the same file extension. The script will also work with a single text file in the "corpus" folder. 
+
+    # Read files from directory and create list from contents
     file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files
 
     texts = []
@@ -88,8 +92,12 @@ Our next step is to load our text files in a manner that they can be used. We wi
         with open(filename, mode = 'r', encoding = 'mac-roman') as f: # specify encoding as appropriate
             texts.append(f.read())
 
-    print(texts[0]) # print the first .txt file in the list to confirm`
-    
+    print(texts[0]) # print the first .txt file in the list to confirm
+
+You may need to adjust the encoding value.    
+
+Hit the F5 key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab), new variables named file_list and texts should appear with expected text data values.
+
 <hr />
 
 ## **4.** Identify stopwords for the corpus
