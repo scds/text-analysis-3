@@ -7,7 +7,7 @@ nav_order: 4
 
 # Topic Modeling with Python (Gensim & SpaCy)
 
-Our third approach to topic modeling uses the Python programming language. The lesson that follows uses the open source integrated development environment (IDE) Spyder, which is bundled in with Anaconda data science platform that you were encouraged to download at the beginning of the lesson. If you are new to programming (and perhaps not to keen to learn), you may alternatvely wish to use the [Jupyter notebook instance of the script](https://colab.research.google.com/drive/1biLTOz5Va-824g7o94Le9QIRM0jxx2ty?usp=sharing). Instructions on how to run the script are included in the notebook, and there is a [video recording of how to use the script](https://echo360.ca/media/12af901f-4582-4b13-92c5-6e7915e99dcd/public?startTimeMillis=7706430) from a previous workshop (topic modeling starts around 2:08:15); the videos and screenshots below demonstrate the Spyder IDE workflow.   
+Our third approach to topic modeling uses the Python programming language. The lesson that follows uses the open source integrated development environment (IDE) Spyder, which is bundled in with Anaconda data science platform that you were encouraged to download at the beginning of the lesson. If you are new to programming (and perhaps not too keen to learn), you may alternatvely wish to use the [Jupyter notebook instance of the script](https://colab.research.google.com/drive/1biLTOz5Va-824g7o94Le9QIRM0jxx2ty?usp=sharing). Instructions on how to run the script are included in the notebook, and there is a [video recording of how to use the script](https://echo360.ca/media/12af901f-4582-4b13-92c5-6e7915e99dcd/public?startTimeMillis=7706430) from a previous workshop (topic modeling starts around 2:08:15); the videos and screenshots below demonstrate the Spyder IDE workflow.   
 
 You can compare the results that you get from running the script in Jupyter Notebooks on your corpus subset with your results from MALLET and Voyant. If you get the richest and most coherent topics in Python, that is the tool you will want to work with for you full corpus. You may even wish to compare results between Jupyter Notebooks and the Spyder IDE, as outlined below.
 
@@ -31,7 +31,7 @@ Jump to step >
 <hr />
 
 ## **1.** Install the required packages
-Our Python script is dependent on a few external packages that are not by default installed on . We must install them before we can start writing our script, as our next step is to import them!
+Our Python script is dependent on a few external packages that are not by default installed on Anaconda. We must install them before we can start writing our script, as our next step is to import them!
 
 Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
 
@@ -50,6 +50,30 @@ Type (or copy-paste) each of the commands below in the iPython console, which - 
 <hr />
 
 ## **2.** Import internal and external libraries (i.e. dependencies)
+Now, we will start writing our script in the Spyder editor (left pane in the default interface). Our first step is to import the libraries we just installed to let the console know that we require them. We will highlight when we use the various libraries in our code to give you a sense of where they fit in to the picture!
+
+After the initial code comments that Spyder provides for you (and which you can elaborate upon), type or copy / paste the following commands and comments:
+
+`   # Import internal libraries: glob for grabbing docs from directory
+    import glob
+
+    # Import external libraries: gensim for preprocessing and LDA
+    import gensim
+    import gensim.corpora as corpora
+    from gensim.utils import simple_preprocess
+    from gensim.models import CoherenceModel
+
+    # Import external libraries: spaCy for tokenization, lemmatization and stopwords
+    import spacy
+    from spacy.lang.en import English                 # For other languages, refer to the SpaCy website: https://spacy.io/usage/models
+    from spacy.lang.en.stop_words import STOP_WORDS   # Also need to update stopwords for other languages (e.g. spacy.lang.uk.stop_words for Ukrainian)
+
+    # Import external libraries: pyLDA for vis
+    import pyLDAvis
+    import pyLDAvis.gensim_models as gensimvis`
+
+You will note in the code above there is the option of working with texts in languages other than English. 
+
 <hr />
 
 ## **3.** Read the files containing the text data
