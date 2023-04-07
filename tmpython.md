@@ -28,23 +28,21 @@ Jump to step >
 
 <hr />
 
-<hr />
-
 ## **1.** Install the required packages
 Our Python script is dependent on a few external packages that are not by default installed on Anaconda. We must install them before we can start writing our script, as our next step is to import them!
 
 Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
 
-* Install Gensim<br>
-`pip install gensim`
-
-* Install SpaCy<br>
+* Install SpaCy to preprocess the text data<br>
 `pip install spacy`
 
-* Install the trained language model from SpaCy (required to be able to use the SpaCy library)<br>
+* Install the trained language model from SpaCy required to use the SpaCy library<br>
 `pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl`
 
-* Install pyLDAvis<br>
+* Install Gensim to create the topics<br>
+`pip install gensim`
+
+* Install pyLDAvis to create a visualization of the topics<br>
 `pip install pyLDAvis`
 
 <hr />
@@ -52,36 +50,40 @@ Type (or copy-paste) each of the commands below in the iPython console, which - 
 ## **2.** Import internal and external libraries (i.e. dependencies)
 Now, we will start writing our script in the Spyder editor (left pane in the default interface). Our first step is to import the libraries we just installed to let the console know that we require them. We will highlight when we use the various libraries in our code to give you a sense of where they fit in to the picture!
 
-After the initial code comments that Spyder provides for you (and which you can elaborate upon), type or copy / paste the following commands and comments:
+Begin by creating a new file in Spyder. After the initial code comments that Spyder provides for you, and which you can elaborate upon if you like, type or copy / paste the following commands and comments:
 
     # Import internal libraries: glob for grabbing docs from directory
     import glob
-
-    # Import external libraries: gensim for preprocessing and LDA
-    import gensim
-    import gensim.corpora as corpora
-    from gensim.utils import simple_preprocess
-    from gensim.models import CoherenceModel
 
     # Import external libraries: spaCy for tokenization, lemmatization and stopwords
     import spacy
     from spacy.lang.en import English                 # For other languages, refer to the SpaCy website: https://spacy.io/usage/models
     from spacy.lang.en.stop_words import STOP_WORDS   # Also need to update stopwords for other languages (e.g. spacy.lang.uk.stop_words for Ukrainian)
 
+    # Import external libraries: gensim to create models and do some additional preprocessing
+    import gensim
+    import gensim.corpora as corpora
+    from gensim.utils import simple_preprocess
+    from gensim.models import CoherenceModel
+    
     # Import external libraries: pyLDA for vis
     import pyLDAvis
     import pyLDAvis.gensim_models as gensimvis
 
 You will note in the code above there is the option of working with texts in languages other than English.
 
-If you have not saved the script yet, go ahead and do so. Make a note of where you are saving the script, because you will as described below.
+If you have not saved the script yet, go ahead and do so. Make a note of where you are saving the script, because you will need to save your text data relative to where the script is located as described below.
 
 <hr />
 
 ## **3.** Read the files containing the text data
-Our next step is to load our text files in a manner that they can be used; i.e. storing them in a list data structure in Python. We will employ the [`glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. The `glob` library allows us to grab the contents of a directory using pattern matching.
+Our next step is to load our text files in a manner that they can be used; i.e. storing them in a list data structure in Python. We will employ [the `glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. The `glob` library allows us to grab the contents of a directory using pattern matching.
 
-In order to use the lines of code below, you will need to create a new directory (folder) in the folder that contains the python script you are creating called "corpus" and copy your text files to it. For the lines of code below to run, the files must end with the `.txt` file extension - a commonly used file format in text analysis. Alternatively, you can replace `'/*.txt'` below with `'/*.doc'` or `'/*.docx'` but all your text files must have the same file extension. The script will also work with a single text file in the "corpus" folder. 
+In order to use the lines of code below, you will need to create a new directory (folder) in the same folder that contains the python script you are creating. Call the folder "corpus" (note the reference to `'./corpus'` below) and copy your text files to it. 
+
+For the lines of code below to run, the files must end with the `.txt` file extension - a commonly used file format in text analysis. Alternatively, you can replace `'/*.txt'` below with `'/*.doc'` or `'/*.docx'` but all your text files must have the same file extension. The number of characters you can work with - rather than the number of documents - is limited by SpaCy's default threshold, as will be discussed later in the lesson. 
+
+The script will also work with a single text file in the "corpus" folder. 
 
     # Read files from directory and create list from contents
     file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files
@@ -89,18 +91,43 @@ In order to use the lines of code below, you will need to create a new directory
     texts = []
 
     for filename in file_list:
-        with open(filename, mode = 'r', encoding = 'mac-roman') as f: # specify encoding as appropriate
+        with open(filename, mode = 'r', encoding = 'utf-8') as f: # specify encoding as appropriate
             texts.append(f.read())
 
     print(texts[0]) # print the first .txt file in the list to confirm
 
-You may need to adjust the encoding value.    
+You will likely need to adjust the encoding value, based on the encoding of your text files. You can look up how to specify other encodings in Python using the [Standard Encodings table](https://docs.python.org/3/library/codecs.html#standard-encodings); the value to replace in your script can be found in the "Codec" column of the table (e.g. `'mac-roman'`, `'latin-1'`). 
 
-Hit the F5 key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab), new variables named file_list and texts should appear with expected text data values.
+If you do not know the encoding of your text files, you can check it in:
+
+1. Windows OS: open the file in Notepad (default text editor in Windows) and then use the "Save as..." command - the current encoding will be visible in the area where you can specify the encoding of the new file (you do not need to actually save the file, we are just checking the encoding) 
+2. Mac OS: in the TextEdit application (default text editor in Mac), \[reference: https://support.apple.com/en-ca/guide/textedit/txted1028/mac]
+
+Use the F5 key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab in the Spyder IDE), new variables named `file_list` and `texts` should appear with expected text data values.
 
 <hr />
 
 ## **4.** Identify stopwords for the corpus
+
+Stopwords are commonly used words - such as "and," "the," "we" and... well, "as" - that can be expected to be found in any text and so, can be omitted from our analysis because they are unlikely to be of any interest. Stopwords will be removed in the next step - after tokenizing and before lemmatizing - but let us first review what words are in the list and evaluate whether we need to add or remove words.
+
+What constitutes a stopword will vary depending on your corpus and what you are seeking in your analysis. You may find it easiest to run through most of the script, up to creating the topics in [Step 9](#9-create-topics-in-gensim), and then coming back to this step to refine your stopwords. If you already know some of the stopwords you would like to remove from an initial data analysis step (i.e. if you [created topics in Voyant](tmv.html), however, you can add them now.
+
+Most of the code below is commented out, i.e. preceded by `#`. To add stopwords to the list, remove the `#` and substitute `[word]` with your word (ensure that you leave in the single quotes to denote that you are entering string data). Uncomment - remove the `#` - before the second `print(STOP_WORDS)` in the code to verify your work.
+
+Again, use the F5 key to run the script in the console.
+
+    # Print the initial set of stopwords from SpaCy
+    # Also available at: https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py
+    print(STOP_WORDS)
+
+    # Add a word to remove or add from the list
+    # STOP_WORDS.add('[word]') 
+    # STOP_WORDS.remove('[word]')
+
+    # Print to confirm that your word has been added or removed
+    # print(STOP_WORDS)
+
 <hr />
 
 ## **5.** Tokenize and lemmatize text data, and remove stopwords
