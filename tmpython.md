@@ -77,6 +77,19 @@ You will note in the code above there is the option of working with texts in lan
 <hr />
 
 ## **3.** Read the files containing the text data
+Our next step is to load our text files in a manner that they can be used. We will employ the [`glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. 
+
+   `# Read files from directory and create list from contents
+    file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files
+
+    texts = []
+
+    for filename in file_list:
+        with open(filename, mode = 'r', encoding = 'mac-roman') as f: # specify encoding as appropriate
+            texts.append(f.read())
+
+    print(texts[0]) # print the first .txt file in the list to confirm`
+    
 <hr />
 
 ## **4.** Identify stopwords for the corpus
