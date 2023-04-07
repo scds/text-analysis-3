@@ -115,8 +115,6 @@ What constitutes a stopword will vary depending on your corpus and what you are 
 
 Most of the code below is commented out, i.e. preceded by `#`. To add stopwords to the list, remove the `#` and substitute `[word]` with your word (ensure that you leave in the single quotes to denote that you are entering string data). Uncomment - remove the `#` - before the second `print(STOP_WORDS)` in the code to verify your work.
 
-Again, use the F5 key to run the script in the console.
-
     # Print the initial set of stopwords from SpaCy
     # Also available at: https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py
     print(STOP_WORDS)
@@ -128,12 +126,51 @@ Again, use the F5 key to run the script in the console.
     # Print to confirm that your word has been added or removed
     # print(STOP_WORDS)
 
+Again, use the F5 key to run the script in the console.
+
 <hr />
 
 ## **5.** Tokenize and lemmatize text data, and remove stopwords
+
+You may have noticed from the contents of the `text` variable in the Variable Explorer pane, we are currently working with unstructured data - paragraphs and sentences. We can make sense of unstructured data but a computer has a harder time working with it. Even in machine learning applications, where you might enter paragraphs or sentences, the system is typically performing similar steps in the background. 
+
+Our next step, therefore, is to turn our text data into tokens, or a list of individual words. Since topic modeling is dependent on term frequencies - how often a given word appears in a segment of text and with other words - tokenizing allows for the computer to count and classify comparable terms.
+
+Similarly, in the lemmatization process, SpaCy's lemmatizer tool analyzes tokens to determine their "root" form and reduces them to it. Otherwise, a computer would treat "banana" and "bananas" as two distinct terms when - for the purposes of our analysis - they are not.
+
+The SpaCy nlp pipeline - or workflow - also removes the stopwords we added in step 4.
+
+    # Lemmatize tokens
+    def lemmatization(texts, allowed_postags=["NOUN", "ADJ", "VERB", "ADV"]):   # Doing part of speech (PoS) tagging helps with lemmatization
+        # Load the nlp pipeline, omitting the parser and ner steps of the workflow to conserve computer memory
+        nlp = spacy.load("en_core_web_sm", disable=["parser", "ner"]) # For other languages, use models from step 2
+        texts_out = []
+        for text in texts: # Run each of the documents through the nlp pipeline
+            doc = nlp(text)
+            new_text = []
+            for token in doc:
+                if token.pos_ in allowed_postags:
+                    new_text.append(token.lemma_)
+            final = " ".join(new_text)
+            texts_out.append(final)
+        return (texts_out)
+
+    lemmatized_texts = lemmatization(texts)
+    print(lemmatized_texts[0][0:90]) # Print results to verify; you can also check the Variable Explorer in Spyder
+
+> ***Note:** there is a maxium of one million characters in the default nlp pipeline; if you try to run with script on text data with more than one million characters, you will get an error to that effect. The one million character threshold is based on (anticipated) available RAM.*
+
+If you get a max character error, you can change the maximum number of characters using nlp.max_length as below:
+
+    nlp = spacy.load('en_core_web_sm')
+    nlp.max_length = 1500000 # Or other value, given sufficient RAM
+
+If your machine balks (i.e. stops responding, serves you up a spinning beach ball of death or otherwise appears unhappy) at the higher number of characters after modifying the pipeline steps, you may have to break your document(s) into smaller chunks. With some text analysis techniques (e.g. NER), splitting a corpus has no effect on the end result - but, needless to say, it will make a big difference to the topics created. If you find yourself having to work with smaller subsets of your text data, select or arrange them thoughtfully! 
+
 <hr />
 
 ## **6.** Preprocess texts using the Gensim library
+
 <hr />
 
 ## **7.** Create a dictionary of words used in the corpus
