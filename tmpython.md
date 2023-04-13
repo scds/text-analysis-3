@@ -160,7 +160,7 @@ The SpaCy nlp pipeline - or workflow - also removes the stopwords we added in st
 
 > ***Note:** there is a maxium of one million characters in the default nlp pipeline; if you try to run with script on text data with more than one million characters, you will get an error to that effect. The one million character threshold is based on (anticipated) available RAM.*
 
-If you get a max character error, you can change the maximum number of characters using nlp.max_length as below:
+**If you get a max character error** (and only if), you can change the maximum number of characters using nlp.max_length as below:
 
     nlp = spacy.load('en_core_web_sm')
     nlp.max_length = 1500000 # Or other value, given sufficient RAM
@@ -171,9 +171,30 @@ If your machine balks (i.e. stops responding, serves you up a spinning beach bal
 
 ## **6.** Preprocess texts using the Gensim library
 
+For our next step, we will convert our text data into a form that the Gensim library expects to work with: a list data type in Python. The `gensim.utils.simple_preprocess` tool repeats some of the previous preprocessing steps we performed with SpaCy, namely tokenization, which occurs while creating the `Doc` object, and converting tokens to lowercase, which occurs during the lemmatization process. Multiple libraries exist to preprocess text data and there is bound to be some overlap!
+
+What Gensim adds to our preprocessing workflow is the ability to remove accents and the outputting of a list of unicode string tokens that we can then use for topic modeling in Gensim. If you are working with languages others than English, you may not wish to remove accents; Elvia Arroyo-Ramirez [has written about the linguistic imperlialism](https://medium.com/on-archivy/invisible-defaults-and-perceived-limitations-processing-the-juan-gelman-files-4187fdd36759) common to working computationally with text.
+
+You can rewrite (for additional practice and experience) or copy and paste the text below to the end of your script. Because creating the SpaCy `Doc` object in the previous step takes time and does not need to be repeated by running the entire script again, you may wish to simply select the new lines of code you added in the current step and use the `F9` key to run the selection.
+
+After running the lines of code, head over to the Variable Explorer pane in Spyder. You should now have a few new variables, one of which is named `data_words` that contains the tokens. Note the difference in formatting (i.e. syntax) from `lemmatized_texts` indicating that the contents of the variable are of a list data type.
+
+    # Preprocess texts
+    def gen_words(texts):
+        final = [] # Create an empty list to hold tokens
+        for text in texts:
+            new = gensim.utils.simple_preprocess(text, deacc = True) 
+            # If working with languages that employ accents, you can set deacc to False
+            final.append(new)
+        return (final)
+
+    data_words = gen_words(lemmatized_texts) # Pass lemmatized_texts from previous step through the gen_words function
+
 <hr />
 
 ## **7.** Create a dictionary of words used in the corpus
+
+In Step 6. we 
 <hr />
 
 ## **8.** Retrieve words from corpus dictionary
