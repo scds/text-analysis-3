@@ -177,8 +177,6 @@ What Gensim adds to our preprocessing workflow is the ability to remove accents 
 
 You can rewrite (for additional practice and experience) or copy and paste the text below to the end of your script. Because creating the SpaCy `Doc` object in the previous step takes time and does not need to be repeated by running the entire script again, you may wish to simply select the new lines of code you added in the current step and use the `F9` key to run the selection.
 
-After running the lines of code, head over to the Variable Explorer pane in Spyder. You should now have a few new variables, one of which is named `data_words` that contains the tokens. Note the difference in formatting (i.e. syntax) from `lemmatized_texts` indicating that the contents of the variable are of a list data type.
-
     # Preprocess texts
     def gen_words(texts):
         final = [] # Create an empty list to hold tokens
@@ -190,11 +188,24 @@ After running the lines of code, head over to the Variable Explorer pane in Spyd
 
     data_words = gen_words(lemmatized_texts) # Pass lemmatized_texts from previous step through the gen_words function
 
+After running the lines of code, head over to the Variable Explorer pane in Spyder. You should now have a few new variables, one of which is named `data_words` that contains the tokens. Note the difference in formatting (i.e. syntax) from `lemmatized_texts` indicating that the contents of the variable are of a list data type.
+
 <hr />
 
 ## **7.** Create a dictionary of words used in the corpus
 
-In Step 6. we 
+In order to be able to count the number of times a given word is used, a value that will be used in topic modeling, we will next create a dictionary of our tokens. A dictionary is another data type in Python. 
+
+    # Create dictionary of all words in texts
+    id2word = corpora.Dictionary(data_words)
+
+    # Represent dictionary words as tuples (index, frequency)
+    corpus = []
+    for text in data_words:
+        new = id2word.doc2bow(text)
+        corpus.append(new)
+
+
 <hr />
 
 ## **8.** Retrieve words from corpus dictionary
