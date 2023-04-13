@@ -175,6 +175,8 @@ For our next step, we will convert our text data into a form that the Gensim lib
 
 What Gensim adds to our preprocessing workflow is the ability to remove accents and the outputting of a list of unicode string tokens that we can then use for topic modeling in Gensim. If you are working with languages others than English, you may not wish to remove accents; Elvia Arroyo-Ramirez [has written about the linguistic imperlialism](https://medium.com/on-archivy/invisible-defaults-and-perceived-limitations-processing-the-juan-gelman-files-4187fdd36759) common to working computationally with text.
 
+If you wish, you can also supply `gensim.utils.simple_preprocess` with an optional parameter to omit words of a particular length, e.g. min_len=3 will exclude words less than 3 characters. In the code block below, you would write `new = gensim.utils.simple_preprocess(text, deacc = True, min_len=3)`. As with removing stopwords, setting a higher minimum word length can help to discard common words that are not relevant to your analysis but it will depend on your corpus.
+
 You can rewrite (for additional practice and experience) or copy and paste the text below to the end of your script. Because creating the SpaCy `Doc` object in the previous step takes time and does not need to be repeated by running the entire script again, you may wish to simply select the new lines of code you added in the current step and use the `F9` key to run the selection.
 
     # Preprocess texts
@@ -194,7 +196,7 @@ After running the lines of code, head over to the Variable Explorer pane in Spyd
 
 ## **7.** Create a dictionary of words used in the corpus
 
-In order to be able to count the number of times a given word is used, a value that will be used in topic modeling, we will next create a dictionary of our tokens. A dictionary is another data type in Python. 
+In order to be able to count the number of times a given word is used, a value needed for topic modeling, we will next create a dictionary from our tokens using the `tuple` data structure in Python (not to be confused with the `dict` or dictionary data structure). A tuple is like a list except that it is immutable - because we do not want our dictionary to change! Our tuple data structure stores two items in a (key, value) pair; e.g. (1, 8). 
 
     # Create dictionary of all words in texts
     id2word = corpora.Dictionary(data_words)
@@ -205,10 +207,22 @@ In order to be able to count the number of times a given word is used, a value t
         new = id2word.doc2bow(text)
         corpus.append(new)
 
+Select the lines above within your script and use the `F9` shortcut key to run the code. Again, we can inspect our results in the Variable Explorer in Spyder: the contents of the newly-created `corpus` variable. The results will be a series of number pairs, e.g.\[(0, 12), (1, 5), (2, 1), (3, 7), (4, 1), ..., (*n*, 15)]. The first number of the pair in parentheses is the index of corresponding word and should run sequentially from 0 to *n*, where *n* is the number of unique words in your corpus. The second number will vary, as it is the count of the indexed word. In the next step, we will print out the word that the index number represents.
 
 <hr />
 
-## **8.** Retrieve words from corpus dictionary
+## **8.** Retrieve words from corpus dictionary (optional)
+
+If you wish to make sense of the `corpus` variable's contents, continue with step 8. Otherwise, you can jump ahead to the next step where we will create our topics.
+
+Copy and paste the code below in to your script. Alternatively, you can simply paste it into the console and run it from there. Using the contents of the `corpus` variable as your guide, change the first number that follows `id2word` to any of the index numbers in `corpus`. You may want to explore words that have a particularly high count (i.e. large second numbers in the tuple).
+
+    # Retrieve individual words from tuples
+    word = id2word[[0][:19][0]]   # Change the first number (currently 0) to see the various terms indexed in step 7.
+    print(word)
+
+You can remove the lines of code from your script when you are done; they are not essential to running the script.
+
 <hr />
 
 ## **9.** Create topics in Gensim
