@@ -256,6 +256,20 @@ Select the lines of code above and run the using the `F9` key. The first time yo
 <hr />
 
 ## **10.** Create topic modeling visualization with LDAvis
+
+Visualization offers an analytical modality that may support some researchers' ability to make observations from the data. Taking the topics from the previous step, we will visualize them using the LDAvis library in Python.
+
+Alternatively, other data practitioners may use the weights assigned to words within topics to create sonifications. Sean Graham provides an introduction to "[The Sound of Data](https://programminghistorian.org/en/lessons/sonification)" on the Programming Historian.
+
+Re-type or copy and paste the code below into your script, then run using the `F9` key. It will produce an HTML file (web page) that contains an interactive visualization.
+
+    # Output visualization
+    vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15)
+    vis_data
+    pyLDAvis.display(vis_data)
+    pyLDAvis.save_html(vis_data, './topicVis' + str(num_topics) + '.html')
+
+The topicVis*n*.html file, where *n* is the number of topics set in `num_topics` from the previous step, will be created in the same directory (folder) as the Python script you have been working on. It may take a few minutes for it to appear.
 <hr />
 
 <br />
