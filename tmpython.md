@@ -173,7 +173,7 @@ If your machine balks (i.e. stops responding, serves you up a spinning beach bal
 
 For our next step, we will convert our text data into a form that the Gensim library expects to work with: a list data type in Python. The `gensim.utils.simple_preprocess` tool repeats some of the previous preprocessing steps we performed with SpaCy, namely tokenization, which occurs while creating the `Doc` object, and converting tokens to lowercase, which occurs during the lemmatization process. Multiple libraries exist to preprocess text data and there is bound to be some overlap!
 
-What Gensim adds to our preprocessing workflow is the ability to remove accents and the outputting of a list of unicode string tokens that we can then use for topic modeling in Gensim. If you are working with languages others than English, you may not wish to remove accents; Elvia Arroyo-Ramirez [has written about the linguistic imperlialism](https://medium.com/on-archivy/invisible-defaults-and-perceived-limitations-processing-the-juan-gelman-files-4187fdd36759) common to working computationally with text.
+What Gensim adds to our preprocessing workflow is the ability to remove accents and the outputting of a list of unicode string tokens that we can then use for topic modeling in Gensim. If you are working with languages others than English, you may not wish to remove accents; Elvia Arroyo-Ramirez [has written about the linguistic imperialism](https://medium.com/on-archivy/invisible-defaults-and-perceived-limitations-processing-the-juan-gelman-files-4187fdd36759) common to working computationally with text.
 
 If you wish, you can also supply `gensim.utils.simple_preprocess` with an optional parameter to omit words of a particular length, e.g. min_len=3 will exclude words less than 3 characters. In the code block below, you would write `new = gensim.utils.simple_preprocess(text, deacc = True, min_len=3)`. As with removing stopwords, setting a higher minimum word length can help to discard common words that are not relevant to your analysis but it will depend on your corpus.
 
@@ -226,6 +226,33 @@ You can remove the lines of code from your script when you are done; they are no
 <hr />
 
 ## **9.** Create topics in Gensim
+
+We are finally ready to start working with topics. We will start by creating the groups of words that will form the basis for the topics, and in the next step, we will use the topics to create a visualization.
+
+In the lines of code below - which you can re-type or copy and paste in your script - there are a couple of opportunities for modifications that may influence your results. The first, `chunksize`, relates to the length of the segments of terms. Recall that, in topic modeling, the text data is split into segments that are meant to roughly emulate the size of a page (based on the assumption that a single topic would be discussed on a page). If your text data does not fit that assumption, you can adjust the `chunksize` variable.  
+
+The second, `passes`, refers to the [number of passes through the corpus during training](https://radimrehurek.com/gensim/models/ldamodel.html). More passes may result in more refined model but with the trade-off of additional processing time.  
+
+    # Specify number of topics (clusters of words)
+
+    num_topics = 10   # Experiment with more and fewer numbers of topics, comparing results
+
+    # Create LDA model
+    lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
+                                               id2word=id2word,
+                                               num_topics=num_topics,
+                                               random_state=100,
+                                               update_every=1,
+                                               chunksize=100,     
+                                               # Change chunksize to increase or decrease the length of segments
+                                               passes=50,         
+                                               # Can do more passes but will increase the time it takes the block to run
+                                               alpha="auto")
+
+    # Print topics
+    lda_model.show_topics()
+
+Select the lines of code above and run the using the `F9` key. The first time you run the code will be similar to a round of exploratory data analysis: you might find some interesting results but you are more likely to observe areas for improvement in your preprocessing steps. For example, do you need to go back to step 4. to remove some additional stopwords? Or do you have a lot of noise in the form of shorter terms, which can be addressed in step 6 with `min_len` in Gensim. Make your adjustments, and run the code from the beginning (`F5`).
 <hr />
 
 ## **10.** Create topic modeling visualization with LDAvis
