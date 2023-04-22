@@ -13,6 +13,10 @@ pip install gensim
 pip install spacy
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0-py3-none-any.whl (a more recent version may exist)
 pip install pyLDAvis
+
+Note: there are a number of lines that are commented out for a variety of reasons, primarily the option to print out the contents of 
+certain variables that can instead be verified in Spyder's Variable Explorer pane.
+
 """
 
 # Import internal libraries: glob for grabbing docs from directory
@@ -33,26 +37,26 @@ import pyLDAvis
 import pyLDAvis.gensim_models as gensimvis
 
 # Read files from directory and create list from contents
-file_list = glob.glob('./dir' + '/*.txt') # directory containing text (.txt) files
+file_list = glob.glob('./texts' + '/*.txt') # directory containing text (.txt) files
 
 texts = []
 
 for filename in file_list:
-    with open(filename, mode = 'r', encoding = 'mac-roman') as f: # specify encoding as appropriate
+    with open(filename, mode = 'r', encoding = 'utf-8') as f: # specify encoding as appropriate
         texts.append(f.read())
 
-# Print the first .txt file in the list to confirm files were read        
+# --Uncomment line below to rint the first .txt file in the list to confirm files were read        
 # print(texts[0])
 
 # Print the initial set of stopwords from SpaCy
 # Also available at: https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py
 print(STOP_WORDS)
 
-# Add a word to remove or add from the list
-# STOP_WORDS.add("[word]") 
-# STOP_WORDS.remove("[word]")
+# --Uncomment lines below to remove or add (first line) or remove (second line) from the stopword list
+# STOP_WORDS.add("[word]")          # Replace [word] with your word to add to the list; only takes one argument at a time.
+# STOP_WORDS.remove("[word]")       # Replace [word] with your word to remove from the list; only takes one argument at a time.
 
-# Print again to confirm that your word has been added or removed
+# --Uncomment line to print the stopword list again to confirm that your word has been added or removed
 # print(STOP_WORDS)
 
 # Lemmatize tokens
@@ -71,6 +75,8 @@ def lemmatization(texts, allowed_postags=["NOUN", "ADJ", "VERB", "ADV"]):
 
 
 lemmatized_texts = lemmatization(texts)
+
+# --Uncomment line below to print the contents of the lemmatized_texts variable
 # print(lemmatized_texts[0][0:90])
 
 
@@ -84,6 +90,7 @@ def gen_words(texts):
 
 data_words = gen_words(lemmatized_texts)
 
+# --Uncomment line below to print contents of the data_words variable
 # print(data_words[0][0:20])
 
 
@@ -117,29 +124,31 @@ for text in data_words:
     new = id2word.doc2bow(text)
     corpus.append(new)
 
+# --Uncomment line below to print a list of (index, frequency) pairs 
 # print(corpus[0][0:20])
 
-# Retrieve individual words from dictionary
+# --Uncomment two lines below to retrieve individual words from dictionary if wishing to explore term frequency
 # word = id2word[[0][:1][0]]
 # print(word)
 
 # Specify number of topics (clusters of words)
 
-num_topics = 10
+num_topics = 10     # Change numeric value for more or fewer topics.
 
 # Create LDA model
 lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
-                                           id2word=id2word,
-                                           num_topics=num_topics,
-                                           random_state=100,
-                                           update_every=1,
-                                           chunksize=100,
-                                           passes=10,
-                                           alpha="auto")
+                                            id2word=id2word,
+                                            num_topics=num_topics,
+                                            per_word_topics = True;
+                                            random_state=100,       # randomState object or a seed to generate one
+                                            update_every=1,         # Number of documents to be iterated through for each update - 0 (batch) or 1 (iterative)
+                                            chunksize=100,          # Number of documents to be used in each training chunk
+                                            passes=10,              # Number of passes through the corpus during training
+                                            alpha="auto")
 
 
-# Output visualization
-vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15)
+# Output visualization to HTML file and open in browser to view
+vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15)  # R variable holds the number of topics to print in bar charts
 vis_data
 pyLDAvis.display(vis_data)
 pyLDAvis.save_html(vis_data, './topicVis' + str(num_topics) + '.html')
