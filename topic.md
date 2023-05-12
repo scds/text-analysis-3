@@ -19,11 +19,11 @@ Topic modeling adds nuance by grouping terms (words) that appear in the text tog
 
 ## Topic modeling in practice
 
-Topic modeling can be an elusive concept to grasp relative to other text analysis techniques like named entity recognition or part-of-speech (POS) tagging. If it is still a bit hazy, you may find it helpful to actually go through the process. Visit David Mimno's [jsLDA](https://mimno.infosci.cornell.edu/jsLDA/jslda.html) web application to try it out yourself!
+Topic modeling can be an elusive concept to grasp relative to other text analysis techniques like named entity recognition or part-of-speech (POS) tagging. You may find the practice of topic modeling useful in clarifying the concept: visit David Mimno's [jsLDA](https://mimno.infosci.cornell.edu/jsLDA/jslda.html) web application to try it out yourself!
 
 There will be a demo corpus already loaded that you can experiment with if you like. Try changing the number of topics -- as too many topics can lead to overlap, and too few can make the clusters overly general -- then running a few iterations, which refines the model.
 
-![](assets/img/mimno-eg.png)
+![Screenshot of Mimno's jsLDA interface with topics as described in the next paragraph](assets/img/mimno-eg.png)
 
 Your topics may differ! But you may note a coherence within clusters of words, or topics, such as:
 * economic trade foreign production business policy agriculture farm economy international
