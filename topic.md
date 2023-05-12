@@ -19,7 +19,7 @@ Topic modeling adds nuance by grouping terms (words) that appear in the text tog
 
 ## Topic modeling in practice
 
-Topic modeling can be an elusive concept to grasp relative to other text analysis techniques like named entity recognition or part-of-speech (POS) tagging. You may find the practice of topic modeling useful in clarifying the concept: visit David Mimno's [jsLDA](https://mimno.infosci.cornell.edu/jsLDA/jslda.html) web application to try it out yourself!
+Topic modeling can be an elusive concept to grasp relative to other text analysis techniques like named entity recognition or part-of-speech (POS) tagging. A demonstration might help to clarify: visit David Mimno's [jsLDA](https://mimno.infosci.cornell.edu/jsLDA/jslda.html) web application to try it out yourself!
 
 There will be a demo corpus already loaded that you can experiment with if you like. Try changing the number of topics -- as too many topics can lead to overlap, and too few can make the clusters overly general -- then running a few iterations, which refines the model.
 
@@ -38,7 +38,10 @@ If you wish to supply your own list of stopwords to the jsLDA web application, y
 
 ## How topic modeling works
 
-Topic modeling is approached based on the assumpution described by Ignatow & Mihalcea above: a text is split into segments of equal length, with the intention of . 
+Topic modeling is approached by splitting a text into segments of equal length, where terms within the segment are counted. The assumption in topic modeling is that each segment approximates a topic; that is, when we write, we typically talk about one main topic or theme for a paragraph or page. It is possible in most tools to adjust the length of the segments, and you may wish to experiment with values according to the format of your text data: for example, segments of 100 for an article or segments of 50 for a micro-blog post. Of course, because we are not manually segmenting the text each time the author changes the subject, there are trade-offs for the coherence of our topics. 
+
+<!--https://nlp.stanford.edu/courses/cs224n/2007/fp/adarve-kwong-speriosu.pdf-->
+
 It may be clear from our results with Mimno's tool that it would be difficult if not impossible to perform on texts at scale without computational means. At the same time, there are evident trade-offs in automating tasks through the use of general rules: words in a related topic may be split between segments and so, appear less related.
 
 ## On the Latent Dirichlet Allocation (LDA) algorithm
