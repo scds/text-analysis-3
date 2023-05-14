@@ -40,18 +40,29 @@ It may be clear from our results with Mimno's tool that it would be difficult if
 
 ## How topic modeling works
 
-There have been numerous explanatory articles written on topic modeling in the Digital Humanities, including Graham, Weingart and Milligan's "[Getting Started with Topic Modeling and MALLET](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)" and Ted Underwood's "[Topic Modeling Made Just Simple Enough](https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)" (from which the further simplified explanation provided below borrows). You may wish to read them if you are new to the idea of topic modeling and would like to know more about how it works, as we will only briefly discuss it here in relation to the tasks we will be performing in the lesson. 
+Numerous explanatory articles written on topic modeling have been written by Digital Humanities scholars, including David Blei's "[Probabilistic Topic Models](https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)," Graham, Weingart and Milligan's "[Getting Started with Topic Modeling and MALLET](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)" and Ted Underwood's "[Topic Modeling Made Just Simple Enough](https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)" (from which the further simplified explanation provided below borrows). They are great resources if you are new to the idea of topic modeling and would like to know more about how it works, as we will only briefly discuss it here in relation to the tasks we will be performing in the lesson. 
 
-Topic modeling is approached by splitting a text into segments of equal length, and counting the occurrence of terms within the segment. Each segment is presumed to contain approximately one topic (though the topic is not usually unique within the corpus); that is, when we write, we typically talk about one main topic or theme for a paragraph or so. It is possible in most tools to adjust the length of the segments, and you can experiment with values according to the format of your text data: for example, segments of 100 for articles or segments of 50 for micro-blog posts. Of course, because we are not manually segmenting the text each time the author changes the subject, there are trade-offs for the coherence of our topics. 
-
-Topics "can be understood as a collection of words that have different probabilities of appearance in passages discussing the topic" (Underwood). In topic modeling, the terms comprising a topic are not usually known in advance so terms are initially assigned randomly . Many topic modeling approaches rely on the Latent Dirichlet Allocation algorithm, though it is not the only algorithm used to perform topic modeling (see also. When we create our Python script to  . 
-
-The overall premise of topic modeling is perhaps best captured by Graham, Weingart and Milligan: 
+The overall premise of topic modeling is perhaps most succinctly captured by Graham, Weingart and Milligan: 
 
 > \[Topic modeling programs] assume that any piece of text is composed (by an author) by selecting words from possible baskets of words where
 > each basket corresponds to a topic. If that is true, then it becomes possible to mathematically decompose a text into the probable baskets
 > from whence the words first came. The tool goes through this process over and over again until it settles on the most likely distribution
 > of words into baskets, which we call topics.
+
+Topics "can be understood as a collection of words that have different probabilities of appearance in passages discussing the topic" (Underwood). But how does a topic modeling tool arrive at the topics it presents?
+
+Typically, the topic modeling workflow begins by creating dictionary of all words in the corpus so that the number of times each word appears (term frequency) can be weighted against the term frequency of other words. The topic modeling tool or program then splits the text data into segments of equal length, and counts the occurrence of terms within the segment. 
+
+Each segment is presumed to contain approximately one topic, though the topic is not usually unique within the corpus; that is, when we write, we typically talk about one main topic or theme for a paragraph or so. It is possible in most tools to adjust the length of the segments, and you can experiment with values according to the format of your text data: for example, segments of 100 for articles or segments of 50 for micro-blog posts. Of course, because we are not manually segmenting the text each time the author changes the subject, there are trade-offs for the coherence of our topics.
+
+The screenshot below is from the [help documentation for Voyant Tools](https://voyant-tools.org/docs/#!/guide/topics), showing the distribution of topics across the works of Jane Austen. For example, the topic "good mrs bingley bennet daughters girls having woman town fine" is most prevalent in - unsurprisingly - *Pride and Predjudice* (1813) as shown in the visualization on the right. But it also appears in each of the other texts as well. Not all terms will appear in each segment containing the topic, but there is a higher probability that a term from the topic will appear when the topic is discussed. The term "bennet" likely does not occur in Austen texts that are not *Pride and Predjudice* but some of the other terms from the topic - such as "good," "having," and "town" - are present. 
+
+![Screenshot showing a color-coded visualization of topics as they are distributed across Love and Friendship, Lady Susan, Sense and Sensibility and Pride and Prejudice; each text contains each of the 10 topics to a greater or lesser extent](assets/img/topic-distribution-Voyant.png)
+
+Topics, then, should be interpreted holistically - and they do require human interpretation! You might find it useful to name your topics based on clusters of related terms in the topic; for example, "workers," "wage," "strike" might constitute a topic that you interpret as labour organizing. Some topics will have a strong sense of semantic coherence, others may be a meaningless jumble of words.  
+
+Part of the reason for the "jumbly" nature of topics is the latent Direchlet algorithm (LDA) that many topic modeling tools use, which initially assigns terms to topics randomly because topics are generally not known in advance. In topic modeling, we perform repeated "passes" or iterations to refine the topics based on the co-occurence in the text data of the terms. Initially, topics might change quite drastically each time topic modeling is run but will eventually remain fairly consistent. Most topic modeling tools allow you to set the number of passes you want to do.  
+
 
 
 <!--https://nlp.stanford.edu/courses/cs224n/2007/fp/adarve-kwong-speriosu.pdf-->
