@@ -11,7 +11,7 @@ Voyant Tools is an open-source visual text analysis environment designed by (and
 
 You might find that Voyant Tools is entirely sufficient for your purposes. In which case, you can forego the rest of the lesson - but you may also want to try the other methods out for comparison sake, even if they require an increasing degree of comfort with programming concepts and the command line interface. Working with practical and meaningful examples is a great way to learn those skills!
 
-## Voyant Tools - using the web app
+## Voyant Tools
 
 [Voyant Tools](https://voyant-tools.org/) is a web application that is free to use and does not require creating an account. You simply upload your texts and analyze to your heart's content! You can even return to the dashboard that you created with your corpus by making note of the URL; Voyant will store your documents for a period of time, though they will be deleted after a certain point - so you may wish to use Voyant Server (below) if you want to be able to come back to your corpus again and again.
 
@@ -27,15 +27,27 @@ Jump to step >
 
 ## **1.** Upload documents
 
-The Voyant Tools homepage 
+We will first upload the documents to Voyant Tools. The Voyant Tools homepage is very simple in its design and, again, does not prompt you to do anything or provide any information aside from the documents of the corpus itself:
 
-Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including and PDF . It can even try to read tabular information
+![Screenshot of Voyant homepage, which is primarily blank except for a rectangle at the center of the page that reads "Add texts" with a large blue "Reveal" button and, at the top of a page, a large Voyant Tool logo where the "O" in Voyant is an adorable cartoon owl.](assets/img/voyant-home.png)
+
+Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including HTML, MS Word, ODT, Pages and PDF. It can even attempt to read text in tables, and you can provide additional directions on how to treat the tabular data by using the "Options" button hightlighted with an arrow in the screenshot of available options below:
+
+![](assets/img/voyant-options.png)
+
+In the options menu, you will also note the ability to protect a corpus from public access by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to omit (e.g. files from Project Gutenberg).
+
+**Important note:** if you need to set options, do so before uploading your documents. You will not be able to go back to the home 
+
+Because we are using our own texts ("Upload") and not the pre-loaded corpora ("Open"), You can select multiple files  the "Upload" option.
+
+
 
 ## **2.** Explore the Voyant dashboard
 
 ## **3.** Focus on topic modeling
 
-## Voyant Tools - using the server
+## Voyant Tools Server
 
 Voyant Tools has a downloadable version of the application available in the form [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
 
