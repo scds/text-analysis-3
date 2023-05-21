@@ -7,15 +7,33 @@ nav_order: 2
 
 # Topic Modeling with Voyant Tools
 
-Voyant Tools is a visual text analysis environment designed by (and for!) digital humanists. It is a feature-rich yet accessible tool for performing a range of analytical tasks with text data. Later in the lesson, we will use the Python programming language for topic modeling; although the Python approach offers a greater number of parameters to experiment with, it can also require a greater level of comfort with writing code to troubleshoot errors. Voyant has a graphical interface, and - in addition to modeling topics - can map text data to scatterplots, network graphs, stream graphs and more.
+Voyant Tools is an open-source visual text analysis environment designed by (and for!) digital humanists. It is a feature-rich yet accessible tool for performing a range of analytical tasks with text data. Later in the lesson, we will use the Python programming language for topic modeling; although the Python approach offers a greater number of parameters to experiment with, it can also require a greater level of comfort with writing code to troubleshoot errors. Voyant has a graphical interface, and - in addition to modeling topics - can map text data to scatterplots, network graphs, stream graphs and more.
 
 You might find that Voyant Tools is entirely sufficient for your purposes. In which case, you can forego the rest of the lesson - but you may also want to try the other methods out for comparison sake, even if they require an increasing degree of comfort with programming concepts and the command line interface. Working with practical and meaningful examples is a great way to learn those skills!
 
 ## Voyant Tools - using the web app
 
-[Voyant Tools](https://voyant-tools.org/) is a web application that is free to use and does not require creating an account. You simply upload your texts - Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format) - and analyze to your heart's content! You can even return to the dashboard that you created with your corpus by making note of the URL; Voyant will store your documents for a period of time, but they will be deleted after a certain point - so you may wish to use Voyant Server (below) if you want to be able to come back to your corpus again and again.
+[Voyant Tools](https://voyant-tools.org/) is a web application that is free to use and does not require creating an account. You simply upload your texts and analyze to your heart's content! You can even return to the dashboard that you created with your corpus by making note of the URL; Voyant will store your documents for a period of time, though they will be deleted after a certain point - so you may wish to use Voyant Server (below) if you want to be able to come back to your corpus again and again.
 
+<hr />
 
+Jump to step >
+
+1. Upload documents
+2. Explore the Voyant dashboard
+3. Focus on topic modeling
+
+<hr />
+
+## **1.** Upload documents
+
+The Voyant Tools homepage 
+
+Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including and PDF . It can even try to read tabular information
+
+## **2.** Explore the Voyant dashboard
+
+## **3.** Focus on topic modeling
 
 ## Voyant Tools - using the server
 
