@@ -76,6 +76,17 @@ ensure the "plain text" option is selected. Voyant will provide you with a .zip 
 
 ## **3.** Focus on topic modeling
 
+Voyant has a topic modeling tool, but it does not appear in any of the five tool areas in the default dashboard. You may also find it difficult to read or focus on the results of a single tool when it is only taking up a fifth of the page.
+
+To bring up the topic modeling tool in the entire area of the dashboard, hover over the top right of the dashboard interface in the *blue* header (the icon looks like a window or the ARIA label is "Click to choose another tool for this panel location") and select "Topics" from "Corpus Tools" in the drop-down menu. You can also replace tools in individual panes of the dashboard, but expanding it to fit the entire browser window makes the tool easier to work with; you can return to the original dashbord view by selecting "Corpus View" from the same menu.
+
+![](assets/img/voyant-change-tool.png)
+![](assets/img/voyant-tool-list.png)
+
+The Topics tool will fill the entire browser window, similar or identical to the screenshot below:
+
+![Screenshot of the Topics tool, showing a colour-coded set of topics with their tokens (e.g. public supporting indigenous fight ensure vaccination gender vaccine rights children). On the right is a visualization showing the distribution of the topics in each document of the corpus.](assets/img/voyant-topic-interface.png)
+
 ## Voyant Tools Server
 
 Voyant Tools has a downloadable version of the application available in the form [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
