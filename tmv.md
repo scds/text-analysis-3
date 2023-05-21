@@ -19,9 +19,9 @@ You might find that Voyant Tools is entirely sufficient for your purposes. In wh
 
 Jump to step >
 
-1. Upload documents
-2. Explore the Voyant dashboard
-3. Focus on topic modeling
+1. [Upload documents](#1-upload-documents)
+2. [Explore the Voyant dashboard](#2-explore-the-voyant-dashboard)
+3. [Focus on topic modeling](#3-focus-on-topic-modeling)
 
 <hr />
 
@@ -33,17 +33,31 @@ We will first upload the documents to Voyant Tools. The Voyant Tools homepage is
 
 Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including HTML, MS Word, ODT, Pages and PDF. It can even attempt to read text in tables, and you can provide additional directions on how to treat the tabular data by using the "Options" button hightlighted with an arrow in the screenshot of available options below:
 
-![](assets/img/voyant-options.png)
+![](assets/img/voyant-password.png)
 
 In the options menu, you will also note the ability to protect a corpus from public access by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to omit (e.g. files from Project Gutenberg).
 
-**Important note:** if you need to set options, do so before uploading your documents. You will not be able to go back to the home 
+**Important note:** if you need to set options, do so before uploading your documents. You will not be able to go back to the options after the dashboard is created, a process that begins as soon as the documents are uploaded.  
 
-Because we are using our own texts ("Upload") and not the pre-loaded corpora ("Open"), You can select multiple files  the "Upload" option.
+We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"), so Voyant will prompt us to upload them using a system dialog box. You can select multiple files by selecting the first option, holding the Shift key and selecting the last option in your list of documents. If you miss or forget a document, there will be an option to upload additional documents from the Voyant dashboard.
 
+![](assets/img/voyant-upload.png)
 
+When you have selected your documents, Voyant will set about creating the dashboard immediately - which is why you will want to set any option parameters you need to adjust before uploading. It may take a few minutes for Voyant to create the dashboard initially, however, as it must read the PDF files; plain text files are relatively easy for Voyant to work with but if you have a large corpus, it may also take a while. A good time to grab a snack!
+
+If you have any trouble creating the corpus, you can use [the pre-loaded corpus with the lesson documents](https://voyant-tools.org/?corpus=e3e0d4140c53fc8ab68e19521f0ba24a) - although the link will at some point become inactive (corpus created May 21, 2023).
+
+**Another important note:** when your dashboard is ready, **bookmark (or otherwise record) the URL**. Pasting the URL in your browser is the only way to return to it later; there is no global corpus search mechanism in Voyant, and no information is gathered from you to identify your corpus.  
 
 ## **2.** Explore the Voyant dashboard
+
+You will eventually be directed to the Voyant dashboard with your documents loaded, which will appear similar to the screenshot below:
+
+![Voyant dashboard divided into five rectangular areas - three on top and two below - that each contain the visualization for a different tools. In the default arrangement, the tools are (in clockwise order starting from top left): Cirrus, Reader, Trends, Summary and Contexts.](assets/img/voyant-full-dash.png)
+
+There is much to explore! We encourage you to take a few minutes to try out some of the text analysis tools within Voyant. In particular, you may want to:
+
+
 
 ## **3.** Focus on topic modeling
 
