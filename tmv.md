@@ -7,9 +7,9 @@ nav_order: 2
 
 # Topic Modeling with Voyant Tools
 
-Voyant Tools is an open-source visual text analysis environment designed by (and for!) digital humanists. It is a feature-rich yet accessible tool for performing a range of analytical tasks with text data. Later in the lesson, we will use the Python programming language for topic modeling; although the Python approach offers a greater number of parameters to experiment with, it can also require a greater level of comfort with writing code to troubleshoot errors. Voyant has a graphical interface, and - in addition to modeling topics - can map text data to scatterplots, network graphs, stream graphs and more.
+Voyant Tools is an open-source visual text analysis environment designed by (and for!) digital humanists. It is a feature-rich yet accessible tool for performing a range of analytical tasks with text data. Later in the lesson, we will use the Python programming language for topic modeling; although the Python approach offers a greater number of parameters to experiment with, it also demands a greater level of comfort with writing code to troubleshoot errors. Voyant has a graphical interface, and - in addition to modeling topics - can map text data to scatterplots, network graphs, stream graphs and more.
 
-You might find that Voyant Tools is entirely sufficient for your purposes. In which case, you can forego the rest of the lesson - but you may also want to try the other methods out for comparison sake, even if they require an increasing degree of comfort with programming concepts and the command line interface. Working with practical and meaningful examples is a great way to learn those skills!
+You might find that Voyant Tools is entirely sufficient for your purposes. In which case, you can forgo the rest of the lesson - but you may also want to try the other methods out for comparison sake, even if they require more familiarity with programming concepts and the command line interface. Working with practical and meaningful examples is a great way to develop those skills!
 
 ## Voyant Tools
 
@@ -35,7 +35,7 @@ Voyant can read text from [a wide number of file formats](https://voyant-tools.o
 
 ![](assets/img/voyant-password.png)
 
-In the options menu, you will also note the ability to protect a corpus from public access by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to omit (e.g. files from Project Gutenberg).
+In the options menu, you will also note the ability to protect a corpus from public access by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to ignore in your analysis (e.g. files from Project Gutenberg).
 
 **Important note:** if you need to set options, do so before uploading your documents. You will not be able to go back to the options after the dashboard is created, a process that begins as soon as the documents are uploaded.  
 
