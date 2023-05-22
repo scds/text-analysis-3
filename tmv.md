@@ -81,6 +81,7 @@ Voyant has a topic modeling tool, but it does not appear in any of the five tool
 To bring up the topic modeling tool in the entire area of the dashboard, hover over the top right of the dashboard interface in the *blue* header (the icon looks like a window or the ARIA label is "Click to choose another tool for this panel location") and select "Topics" from "Corpus Tools" in the drop-down menu. You can also replace tools in individual panes of the dashboard, but expanding it to fit the entire browser window makes the tool easier to work with; you can return to the original dashbord view by selecting "Corpus View" from the same menu.
 
 ![](assets/img/voyant-change-tool.png)
+
 ![](assets/img/voyant-tool-list.png)
 
 The Topics tool will fill the entire browser window, similar or identical to the screenshot below:
@@ -124,13 +125,21 @@ When you have arrived at a set of meaningful, coherent topics that lend themselv
 
 ![](assets/img/voyant-topic-prevalence.png)
 
-In the visualization above, the cluster "climate change global emissions leader pandemic platform net possible warming" (from a different instance of the model from the topics above) is most prevalent by far in the Green party platform. Given the centrality of environmental issues to the Green party, the prevalence of the topic is not surprising! But there may be interesting areas of overlap between parties to observe as well, or combination of words within topics.
+In the visualization above, the cluster "climate change global emissions leader pandemic platform net possible warming" (from a different instance of the model than the topics above) is most prevalent by far in the Green party platform. Given the centrality of environmental issues to the Green party, the prevalence of the topic is not surprising! But there may be interesting areas of overlap between parties to observe as well, or combination of terms within topics.
 
 You can also select any of the documents from the right-side pane to be shown the prevalence of topics within individual texts. Here, the most prevalent topic in the NDP platform is "canadians care need better supporting housing real make families safe." The least prevalent topic in the NDP platform appears most frequently in the plaform of the party at the other end of the political spectrum, the PPC. 
 
 ![](assets/img/voyant-topics-document.png)
 
-The document weights of the topics can be exported but You can also export the weights of the topics if you wish to, for example, use the data values in a sonification project.
+The probablistic weights of the topics within the documents can be exported via the export button, which looks like a square with an arrow pointing out of it and has the ARIA label "Export a URL, an embeddable tool, data or a bibliographic reference":
+
+![](assets/img/voyant-export-button.png)
+
+From the export menu, select "export current data as tab separated values" - you can copy the values to a spreadsheet and use them, for example, in a sonification project.
+
+![](assets/img/voyant-export-values.png)
+
+With all at you can do with Voyant, 
 
 ## Voyant Tools Server
 
