@@ -87,15 +87,15 @@ The Topics tool will fill the entire browser window, similar or identical to the
 
 ![Screenshot of the Topics tool, showing a colour-coded set of topics with their tokens (e.g. public supporting indigenous fight ensure vaccination gender vaccine rights children). On the right is a visualization showing the distribution of the topics in each document of the corpus.](assets/img/voyant-topic-interface.png)
 
-The topics you are presented with are taken from the first 1000 words in each document. The shortest document we are working with (the PPC platform) has almost 10,000 words, so you may want to adjust the number to include a larger portion of the document. You can change the number of terms used per document via the tool options button on at the top right of the screen. 
+The topics (clusters of words) you are presented with are taken from the first 1000 words in each document. The shortest document we are working with (the PPC platform) has almost 10,000 words, so you may want to adjust the number to include a larger portion of each document. You can change the number of terms used per document via the tool options button on at the top right of the screen. 
 
 ![](assets/img/voyant-options-location.png)
 
-Voyant might lag if you set the number too high, however; moreover, topics can actually become less distinctive when analyzing the entire document, since all parties tend to address the key issues of interest to voters. If we assume that they are front-loading their priorities, then the first 1000 or 5000 words will likely produce meaningful topics.
+Voyant might timeout if you set the number too high, however; moreover, topics can actually become less distinctive when analyzing the entire document, since all parties tend to address the key issues of interest to voters. If we assume that the parties are front-loading their priorities, then the first 1000 or 5000 words will likely produce meaningful topics.
 
 ![](assets/img/voyant-topic-options.png)
 
-The option to edit the list of stopwords may be useful if your topics are comprised of terms like "let's" or "it's" and so on. Voyant will automatically remove stopwords during the dashboard creation process, but the list of stopwords is necessarily generic and cannot capture every word that you may wish to leave out of your analysis.
+The option to edit the list of stopwords may be useful if your topics are comprised of terms like "let's" or "it's" and so on. Voyant will automatically remove stopwords during the dashboard creation process, but the list of stopwords is necessarily broad and cannot capture every word that you may wish to leave out of your analysis.
 
 There are also a few parameters at the bottom left of the interface you can adjust with respect to the number of 1) terms per topic, or how many words should appear on each line (10 by default), and 2) topics, or the number of rows of terms (also 10 by default). Experiment with the values - are your topics more coherent, or easier to interpret, when they contain more terms or less? Does there appear to be semantic repetition within topics which could be streamlined with fewer topics?
 
@@ -118,21 +118,26 @@ After our topics have reached a stasis point, we have the following term cluster
 * new need people workers better families time democrats future working
 * canada canadian canada’s jobs plan businesses small conservatives business canadians
 
-Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. But we can start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength. 
-
+Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. In the topics above, we may have improved our results by changing the tokenization options before uploading the corpus to split tokens at non-letter characters rather than whitespace (i.e. "canada" & "s" vs "canada's"). But we can start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength.
 
 ![](assets/img/voyant-topics-alt.png)
+
+You may wish to perform some additional 
 
 ![](assets/img/voyant-topic-prevalence.png)
 ![](assets/img/voyant-topics-document.png)
 
+You can also export the weights of the topics if you wish to, for example, use the data values in a sonification project.
+
 ## Voyant Tools Server
 
-Voyant Tools has a downloadable version of the application available in the form [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
+Voyant Tools has a downloadable version of the application available in the form of [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
 
 Using Voyant Server is the preferred approach if you will be working with very large corpora or if you are working with documents that should not be publically accessible due to privacy or copyright concerns (although you can password protect your corpus). One drawback of Voyant Server, however, is that it relies on a very narrow window of Java versions - between Java 8 and Java 11.
 
 If you have Java 8, 9, 10 or 11 installed on your computer, Voyant Server will be relatively easy to use. Otherwise, you may need to run multiple versions of Java on your machine - which is doable! - but more involved. Refer to instructions on running multiple versions of Java [in Windows (Sven Woltmann)](https://www.happycoders.eu/java/how-to-switch-multiple-java-versions-windows/) or [on Mac (Jayson Minard on StackOverflow)](https://stackoverflow.com/questions/52524112/how-do-i-install-java-on-mac-osx-allowing-version-switching/52524114#52524114).
+
+When Voyant Server runs as smoothly [as its documentation suggests](https://voyant-tools.org/docs/#!/guide/server), it is superior to the web app. But if you encounter technical barriers in using Voyant Server and do not have the time to troubleshoot them, the web app is perfectly viable option for analysis and short-term dissemination. 
 
 ## References
 <a id="1">[1]</a>
