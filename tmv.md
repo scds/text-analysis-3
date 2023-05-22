@@ -99,13 +99,30 @@ The option to edit the list of stopwords may be useful if your topics are compri
 
 There are also a few parameters at the bottom left of the interface you can adjust with respect to the number of 1) terms per topic, or how many words should appear on each line (10 by default), and 2) topics, or the number of rows of terms (also 10 by default). Experiment with the values - are your topics more coherent, or easier to interpret, when they contain more terms or less? Does there appear to be semantic repetition within topics which could be streamlined with fewer topics?
 
-![Screenshot of topic parameters: a search bar labeled "search"; a slider button to set the number of terms per topic; a slider button to set the number of topics; a button labeled "Run".](assets/img/voyant-topic-options.png)
+![Screenshot of topic parameters: a search bar labeled "search"; a slider button to set the number of terms per topic; a slider button to set the number of topics; a button labeled "Run".](assets/img/voyant-topic-params.png)
 
-You will also note a button in the parameters area labeled "Run." Each time you hit the "Run" button, Voyant attempts "to refine the model of which terms are best suited to which topics (based on co-occurrence in the documents)" by running  . Therefore, you might get a different set of results each time you load up your corpus! However, after a few runs, you will notice that the terms no longer 
+You will also note a button in the parameters area labeled "Run." Each time you hit the "Run" button, Voyant attempts "to refine the model of which terms are best suited to which topics (based on co-occurrence in the documents)"[[1]](#1) by iterating the assignment of terms to topics 100 times (by default, can be changed in options as well). Therefore, you might get a different set of results each time you load up your corpus! However, after a few runs, you should notice that the terms no longer vary significantly or at all from run to run. 
+
+After our topics have reached a stasis point, we have the following term clusters:
 
 ![](assets/img/voyant-topics-final.png)
 
+* government support provinces tax year indigenous services free increase sectors
+* health care housing liberal home covid million long mental public
+* trade canada provincial detailed programs trudeau secure money government market
+* government countries party act federal policies policy billion including people’s
+* sector national based ensure research measures supply firearms management become
+* green climate canada change food just future platform indigenous support
+* canadians work make pandemic help affordable communities child country access
+* economic world reduce life country industry rights products lower means
+* new need people workers better families time democrats future working
+* canada canadian canada’s jobs plan businesses small conservatives business canadians
+
+Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. But we can start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength. 
+
+
 ![](assets/img/voyant-topics-alt.png)
+
 ![](assets/img/voyant-topic-prevalence.png)
 ![](assets/img/voyant-topics-document.png)
 
@@ -117,6 +134,9 @@ Using Voyant Server is the preferred approach if you will be working with very l
 
 If you have Java 8, 9, 10 or 11 installed on your computer, Voyant Server will be relatively easy to use. Otherwise, you may need to run multiple versions of Java on your machine - which is doable! - but more involved. Refer to instructions on running multiple versions of Java [in Windows (Sven Woltmann)](https://www.happycoders.eu/java/how-to-switch-multiple-java-versions-windows/) or [on Mac (Jayson Minard on StackOverflow)](https://stackoverflow.com/questions/52524112/how-do-i-install-java-on-mac-osx-allowing-version-switching/52524114#52524114).
 
+## References
+<a id="1">[1]</a>
+"Topics." *Voyant Tools Help*. https://voyant-tools.org/docs/#!/guide/topics. 
 
 Next --> [Topic Modeling with MALLET](mallet.html)
 
