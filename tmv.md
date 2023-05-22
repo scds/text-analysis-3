@@ -118,16 +118,19 @@ After our topics have reached a stasis point, we have the following term cluster
 * new need people workers better families time democrats future working
 * canada canadian canada’s jobs plan businesses small conservatives business canadians
 
-Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. In the topics above, we may have improved our results by changing the tokenization options before uploading the corpus to split tokens at non-letter characters rather than whitespace (i.e. "canada" & "s" vs "canada's"). But we can start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength.
+Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. In the topics above, we may have improved our results by changing the tokenization options before uploading the corpus to split tokens at non-letter characters rather than whitespace (i.e. "canada" & "s" vs "canada's"). We might also experiment with different numbers of terms and topics. But we can alraedy start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength.
 
-![](assets/img/voyant-topics-alt.png)
-
-You may wish to perform some additional 
+When you have arrived at a set of meaningful, coherent topics that lend themselves to interpretation, you can start to dig deeper into your analysis. You can select a topic on the left side of the screen, and Voyant will highlight their prevalence in each of the documents. 
 
 ![](assets/img/voyant-topic-prevalence.png)
+
+In the visualization above, the cluster "climate change global emissions leader pandemic platform net possible warming" (from a different instance of the model from the topics above) is most prevalent by far in the Green party platform. Given the centrality of environmental issues to the Green party, the prevalence of the topic is not surprising! But there may be interesting areas of overlap between parties to observe as well, or combination of words within topics.
+
+You can also select any of the documents from the right-side pane to be shown the prevalence of topics within individual texts. Here, the most prevalent topic in the NDP platform is "canadians care need better supporting housing real make families safe." The least prevalent topic in the NDP platform appears most frequently in the plaform of the party at the other end of the political spectrum, the PPC. 
+
 ![](assets/img/voyant-topics-document.png)
 
-You can also export the weights of the topics if you wish to, for example, use the data values in a sonification project.
+The document weights of the topics can be exported but You can also export the weights of the topics if you wish to, for example, use the data values in a sonification project.
 
 ## Voyant Tools Server
 
