@@ -35,9 +35,9 @@ Voyant can read text from [a wide number of file formats](https://voyant-tools.o
 
 ![](assets/img/voyant-password.png)
 
-In the options menu, you will also note the ability to protect a corpus from public access by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to ignore in your analysis (e.g. files from Project Gutenberg).
+In the options menu, you will also note the ability to manage access to a corpus by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to ignore in your analysis (e.g. files from Project Gutenberg).
 
-**Important note:** if you need to set options, do so before uploading your documents. You will not be able to go back to the options after the dashboard is created, a process that begins as soon as the documents are uploaded.  
+**Important note:** if you need to set options, do so *before* uploading your documents. You will not be able to go back to the options after the dashboard is created, a process that begins as soon as the documents are uploaded.  
 
 We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"), so Voyant will prompt us to upload them using a system dialog box. You can select multiple files by selecting the first option, holding the Shift key and selecting the last option in your list of documents. If you miss or forget a document, there will be an option to upload additional documents from the Voyant dashboard.
 
@@ -86,6 +86,28 @@ To bring up the topic modeling tool in the entire area of the dashboard, hover o
 The Topics tool will fill the entire browser window, similar or identical to the screenshot below:
 
 ![Screenshot of the Topics tool, showing a colour-coded set of topics with their tokens (e.g. public supporting indigenous fight ensure vaccination gender vaccine rights children). On the right is a visualization showing the distribution of the topics in each document of the corpus.](assets/img/voyant-topic-interface.png)
+
+The topics you are presented with are taken from the first 1000 words in each document. The shortest document we are working with (the PPC platform) has almost 10,000 words, so you may want to adjust the number to include a larger portion of the document. You can change the number of terms used per document via the tool options button on at the top right of the screen. 
+
+![](assets/img/voyant-options-location.png)
+
+Voyant might lag if you set the number too high, however; moreover, topics can actually become less distinctive when analyzing the entire document, since all parties tend to address the key issues of interest to voters. If we assume that they are front-loading their priorities, then the first 1000 or 5000 words will likely produce meaningful topics.
+
+![](assets/img/voyant-topic-options.png)
+
+The option to edit the list of stopwords may be useful if your topics are comprised of terms like "let's" or "it's" and so on. Voyant will automatically remove stopwords during the dashboard creation process, but the list of stopwords is necessarily generic and cannot capture every word that you may wish to leave out of your analysis.
+
+There are also a few parameters at the bottom left of the interface you can adjust with respect to the number of 1) terms per topic, or how many words should appear on each line (10 by default), and 2) topics, or the number of rows of terms (also 10 by default). Experiment with the values - are your topics more coherent, or easier to interpret, when they contain more terms or less? Does there appear to be semantic repetition within topics which could be streamlined with fewer topics?
+
+![Screenshot of topic parameters: a search bar labeled "search"; a slider button to set the number of terms per topic; a slider button to set the number of topics; a button labeled "Run".](assets/img/voyant-topic-options.png)
+
+You will also note a button in the parameters area labeled "Run." Each time you hit the "Run" button, Voyant attempts "to refine the model of which terms are best suited to which topics (based on co-occurrence in the documents)" by running  . Therefore, you might get a different set of results each time you load up your corpus! However, after a few runs, you will notice that the terms no longer 
+
+![](assets/img/voyant-topics-final.png)
+
+![](assets/img/voyant-topics-alt.png)
+![](assets/img/voyant-topic-prevalence.png)
+![](assets/img/voyant-topics-document.png)
 
 ## Voyant Tools Server
 
