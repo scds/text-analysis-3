@@ -13,7 +13,13 @@ Preparation for this tutorial consists of two steps: [Getting the data](#get-the
   
 ## Get the data
 
-The corpus we will be working with in the lesson is comprised of the platforms of the major political parties in Canada that were presented in advance of the 2021 federal election. They can be downloaded from the web as PDF documents; the first tool we will be using, Voyant, can read PDF files and convert them to plain text. If the documents are no longer available online, we have made preservation copies of them for later access and use. 
+The corpus - or collection of documents - we will be working with in the lesson is comprised of the platforms of the major political parties in Canada presented in advance of the 2021 federal election. They can be downloaded from the web as PDF documents; the first tool we will be using, Voyant, reads PDF files and converts them to plain text. If the documents are no longer available online, we have made [preservation copies of them](https://github.com/scds/text-analysis-3/blob/main/assets/lesson-corpus.zip) (as plain text files) for future access and use. 
+
+* 2021 platform - [Conservative Party of Canada](https://web.archive.org/web/20210922084914/https://cpcassets.conservative.ca/wp-content/uploads/2021/09/08200659/e4cd8c0115c3ea0.pdf)
+* 2021 platform - [Green Party](https://www.greenparty.ca/sites/default/files/gpc_platform_en_v-02.pdf)
+* 2021 platform - [Liberal Party](https://liberal.ca/wp-content/uploads/sites/292/2021/09/Platform-Forward-For-Everyone.pdf)
+* 2021 platform - [New Democratic Party](https://xfer.ndp.ca/2021/Commitments/Ready%20for%20Better%20-%20NDP%202021%20commitments.pdf)
+* 2021 platform - [People's Party of Canada]
 
 
 With topic modeling, we would normally be working with a larger corpus - tens, hundres or even thousands of documents - but we will use a small selection of documents. . Training machine learning systems with small datasets, of course, yields a coarser and brittler model that may not produce useful results outside of the context of its training (i.e. not generalizable to other datasets). Ideally, you will use the skills and techniques you learn in the workshop on an actual corpus you would be using in your research.
