@@ -47,7 +47,9 @@ When you have selected your documents, Voyant will set about creating the dashbo
 
 If you have any trouble creating the corpus, you can use [the pre-loaded corpus with the lesson documents](https://voyant-tools.org/?corpus=e3e0d4140c53fc8ab68e19521f0ba24a) - although the link will at some point become inactive (corpus created May 21, 2023).
 
-**Another important note:** when your dashboard is ready, **bookmark (or otherwise record) the URL**. Pasting the URL in your browser is the only way to return to it later; there is no global corpus search mechanism in Voyant, and no information is gathered from you to identify your corpus.  
+**Another important note:** when your dashboard is ready, **bookmark (or otherwise record) the URL**. Pasting the URL in your browser is the only way to return to it later; there is no global corpus search mechanism in Voyant, and no information is gathered from you to identify your corpus.
+
+<hr />
 
 ## **2.** Explore the Voyant dashboard
 
@@ -73,6 +75,8 @@ You can download the documents in plain text format by replacing the Summary too
 ensure the "plain text" option is selected. Voyant will provide you with a .zip file containing each of the documents in .txt file format.
 
 ![Screenshot of Documents tool download dialog box, highlighting "Documents", "Download" and "plain text" buttons.](assets/img/voyant-download.png)
+
+<hr />
 
 ## **3.** Focus on topic modeling
 
