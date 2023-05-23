@@ -135,11 +135,15 @@ The probablistic weights of the topics within the documents can be exported via 
 
 ![](assets/img/voyant-export-button.png)
 
-From the export menu, select "export current data as tab separated values" - you can copy the values to a spreadsheet and use them, for example, in a sonification project.
+From the export menu, select "export current data as tab separated values" - you can copy the values to a spreadsheet and use them, for example, in [a sonification project](learn-more.html).
 
 ![](assets/img/voyant-export-values.png)
 
-With all at you can do with Voyant, 
+Try Voyant out with your own pre-processed corpus; if you get so caught up in your analysis that you forget to finish the lesson, we will completely understand :-)
+
+Otherwise, let us try our next approach: topic modeling with the command-line tool, MALLET!
+
+<hr />
 
 ## Voyant Tools Server
 
