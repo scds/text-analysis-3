@@ -19,10 +19,11 @@ The corpus - or collection of documents - we will be working with in the lesson 
 * 2021 platform - [Green Party](https://www.greenparty.ca/sites/default/files/gpc_platform_en_v-02.pdf)
 * 2021 platform - [Liberal Party](https://liberal.ca/wp-content/uploads/sites/292/2021/09/Platform-Forward-For-Everyone.pdf)
 * 2021 platform - [New Democratic Party](https://xfer.ndp.ca/2021/Commitments/Ready%20for%20Better%20-%20NDP%202021%20commitments.pdf)
-* 2021 platform - [People's Party of Canada]
+* 2021 platform - [People's Party of Canada](assets/2021-platform_PPC.txt)
 
+If you are downloading the PDF files directly, no pre-processing steps will have been performed (the one exception is the People's Party of Canada platform, which was not made available as a single PDF document, and was instead copied from the webpages of a version on the [Internet Archive's Wayback Machine](https://archive.org/web/) crawled the evening before the 2021 federal election). There might be errors in the document as a result of being formatted as a PDF but they are likely to have a negligible effect on our (quick, for demonstration purposes only) analysis.
 
-With topic modeling, we would normally be working with a larger corpus - tens, hundres or even thousands of documents - but we will use a small selection of documents. . Training machine learning systems with small datasets, of course, yields a coarser and brittler model that may not produce useful results outside of the context of its training (i.e. not generalizable to other datasets). Ideally, you will use the skills and techniques you learn in the workshop on an actual corpus you would be using in your research.
+When working with your own documents, take some time to review them and address spelling errors or other anomalies that may affect your analysis. Topic modeling, like many other computational text analysis techniques, ultimately relies on counting words - and the words must be identical to be counted together (e.g. "labor" and "labour" will be considered two unique words).
 
 <hr />
 
