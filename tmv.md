@@ -59,7 +59,9 @@ You will eventually be directed to the Voyant dashboard with your documents load
 
 There is much to explore! We encourage you to take a few minutes to try out some of the text analysis tools within Voyant. In particular, you may want to perform a bit of initial data analysis to identify any errors that may affect our results.
 
-The Summary tool in the bottom left corner gives us an overview of the text data in each document. If we scroll down in the tool, we will come across information about words, or tokens, in the corpus. The Summmary tool highlights the most used words in the corpus - canada, government, canadians, new and support - as well as the most distinctive words within each document.
+### Initial data analysis
+
+The Summary tool in the bottom left corner gives us an overview of the text data in each document. If we scroll down in the tool, we will come across information about words, or tokens, in the corpus. It highlights the most used words in the corpus - canada, government, canadians, new and support - as well as the most distinctive words within each document.
 
 ![](assets/img/voyant-summary.png)
 
@@ -69,10 +71,11 @@ For the Green Party, "reen" and "inctive" are distinctive words within the docum
 
 Of course, we have not performed any pre-processing steps on our documents because we are using them as a quick example to demonstrate the use of Voyant. Normally, we would try to catch and correct such errors before uploading the documents to Voyant (although you may want to use Voyant as an initial data analysis tool to surface repeated spelling errors). When you are working with your own documents, you can likely appreciate the importance of taking the time to verify the accuracy of the data!
 
-The other task we strongly recommend performing is actually to *download* the corpus documents for use in later steps of the lesson. Voyant has handily converted the PDF documents to a text format that we can export to a plain text file, which will make using them with MALLET and Python easier.
+### Download the corpus as plain text files
 
-You can download the documents in plain text format by replacing the Summary tool with the Documents tool in the bottom left corner of the default Voyant dashboard. The "Download" button depicted in the screenshot below will then become visible. When choosing download options, 
-ensure the "plain text" option is selected. Voyant will provide you with a .zip file containing each of the documents in .txt file format.
+The other task we strongly recommend performing is actually to *download* the corpus documents for use in later steps of the lesson. Voyant has handily converted the PDF documents to a text format that we can export to a plain text file, which will make it easier for us to use them with MALLET and Python.
+
+You can download the documents in plain text format by replacing the Summary tool with the Documents tool in the bottom left corner of the default Voyant dashboard. The "Download" button depicted in the screenshot below will then become visible. When choosing download options, ensure the "plain text" option is selected. Voyant will provide you with a .zip file containing each of the documents in .txt file format.
 
 ![Screenshot of Documents tool download dialog box, highlighting "Documents", "Download" and "plain text" buttons.](assets/img/voyant-download.png)
 
