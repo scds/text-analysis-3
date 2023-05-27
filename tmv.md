@@ -31,19 +31,19 @@ We will first upload the documents to Voyant Tools. The Voyant Tools homepage is
 
 ![Screenshot of Voyant homepage, which is primarily blank except for a rectangle at the center of the page that reads "Add texts" with a large blue "Reveal" button and, at the top of a page, a large Voyant Tool logo where the "O" in Voyant is an adorable cartoon owl.](assets/img/voyant-home.png)
 
-Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including HTML, MS Word, ODT, Pages and PDF. It can even attempt to read text in tables, and you can provide additional directions on how to treat the tabular data by using the "Options" button hightlighted with an arrow in the screenshot of available options below:
+Voyant can read text from [a wide number of file formats](https://voyant-tools.org/docs/#!/guide/corpuscreator-section-input-format), including HTML, MS Word, ODT, Pages and PDF. It can even attempt to read text in tables; provide Voyant with additional directions on how to treat the tabular data by using the "Options" button hightlighted with an arrow in the screenshot of available options below:
 
 ![](assets/img/voyant-password.png)
 
 In the options menu, you will also note the ability to manage access to a corpus by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to ignore in your analysis (e.g. files from Project Gutenberg).
 
-**Important note:** if you need to set options, do so *before* uploading your documents. You will not be able to go back to the options after the dashboard is created, a process that begins as soon as the documents are uploaded.  
+**Important note:** if you need to set options, do so *before* uploading your documents. You will not be able to go back to the options menu after the dashboard is created, a process that begins as soon as the documents are uploaded.  
 
-We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"), so Voyant will prompt us to upload them using a system dialog box. You can select multiple files by selecting the first option, holding the Shift key and selecting the last option in your list of documents. If you miss or forget a document, there will be an option to upload additional documents from the Voyant dashboard.
+We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"), so Voyant will prompt us to upload them using a system dialog box. You can select multiple files by selecting the first file, holding the Shift key and selecting the last file in your list of documents. If you miss or forget a document, there will be an option to upload additional documents from the Voyant dashboard.
 
 ![](assets/img/voyant-upload.png)
 
-When you have selected your documents, Voyant will set about creating the dashboard immediately - which is why you will want to set any option parameters you need to adjust before uploading. It may take a few minutes for Voyant to create the dashboard initially, however, as it must read the PDF files; plain text files are relatively easy for Voyant to work with but if you have a large corpus, it may also take a while. A good time to grab a snack!
+When you have selected your documents, Voyant will set about creating the dashboard immediately - which is why you will want to set any option parameters you need to adjust before uploading. It may take a few minutes for Voyant to create the dashboard, however, as it must read the PDF files; plain text files are relatively easy for Voyant to work with but if you have a large corpus, it may also take a while. A good time to grab a snack!
 
 If you have any trouble creating the corpus, you can use [the pre-loaded corpus with the lesson documents](https://voyant-tools.org/?corpus=e3e0d4140c53fc8ab68e19521f0ba24a) - although the link will at some point become inactive (corpus created May 21, 2023).
 
