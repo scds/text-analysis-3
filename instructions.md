@@ -10,10 +10,10 @@ has_toc: false
 
 ## Lesson Roadmap
 
-1. What is Topic Modeling?
-2. Topic Modeling with Voyant Tools
-3. Topic Modeling with MALLET
-4. Topic Modeling with Python (Gensim and SpaCy)
+1. [What is Topic Modeling?](topic.html)
+2. [Topic Modeling with Voyant Tools](tmv.html)
+3. [Topic Modeling with MALLET](mallet.html)
+4. [Topic Modeling with Python (Gensim and SpaCy)](tmpython.html)
 
 <hr />
 
