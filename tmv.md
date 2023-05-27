@@ -13,7 +13,7 @@ You might find that Voyant Tools is entirely sufficient for your purposes. In wh
 
 ## Voyant Tools
 
-[Voyant Tools](https://voyant-tools.org/) is a web application that is free to use and does not require creating an account. You simply upload your texts and analyze to your heart's content! You can even return to the dashboard that you created with your corpus by making note of the URL; Voyant will store your documents for a period of time, though they will be deleted after a certain point - so you may wish to use Voyant Server (below) if you want to be able to come back to your corpus again and again.
+[Voyant Tools](https://voyant-tools.org/) is a web application that is free to use and does not require creating an account. You simply upload your texts and analyze to your heart's content! You can even return to the dashboard that you created with your corpus by making note of the URL; Voyant will store your documents for a period of time, though they will be deleted after a certain point. You may wish to use [Voyant Server](#voyant-tools-server) (below) if you want to be able to come back to your corpus again and again.
 
 <hr />
 
