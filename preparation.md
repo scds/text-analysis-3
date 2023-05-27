@@ -15,7 +15,7 @@ Preparation for this tutorial consists of two steps: [Getting the data](#get-the
 
 The corpus - or collection of documents - we will be working with in the lesson is comprised of the platforms of the major political parties in Canada presented in advance of the 2021 federal election. They can be downloaded from the web as PDF documents; the first tool we will be using, Voyant, reads PDF files and converts them to plain text. If the documents are no longer available online, we have made [preservation copies of them](https://github.com/scds/text-analysis-3/blob/main/assets/lesson-corpus.zip) (as plain text files) for future access and use. 
 
-Create a folder to keep your text data files together in a convenient location, then download each of the following 5 PDF files to the folder:
+Create a folder to keep your text data files together in a convenient location, then download each of the following files to the folder:
 
 * 2021 platform - [Conservative Party of Canada](https://web.archive.org/web/20210922084914/https://cpcassets.conservative.ca/wp-content/uploads/2021/09/08200659/e4cd8c0115c3ea0.pdf)
 * 2021 platform - [Green Party](https://www.greenparty.ca/sites/default/files/gpc_platform_en_v-02.pdf)
