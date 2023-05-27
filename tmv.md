@@ -45,7 +45,7 @@ We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"
 
 When you have selected your documents, Voyant will set about creating the dashboard immediately - which is why you will want to set any option parameters you need to adjust before uploading. It may take a few minutes for Voyant to create the dashboard, however, as it must read the PDF files; plain text files are relatively easy for Voyant to work with but if you have a large corpus, it may also take a while. A good time to grab a snack!
 
-If you have any trouble creating the corpus, you can use [the pre-loaded corpus with the lesson documents](https://voyant-tools.org/?corpus=e3e0d4140c53fc8ab68e19521f0ba24a) - although the link will at some point become inactive (corpus created May 21, 2023).
+<!--If you have any trouble creating the corpus, you can use [the pre-loaded corpus with the lesson documents](https://voyant-tools.org/?corpus=e3e0d4140c53fc8ab68e19521f0ba24a) - although the link will at some point become inactive (corpus created May 21, 2023).-->
 
 **Another important note:** when your dashboard is ready, **bookmark (or otherwise record) the URL**. Pasting the URL in your browser is the only way to return to it later; there is no global corpus search mechanism in Voyant, and no information is gathered from you to identify your corpus.
 
@@ -83,33 +83,49 @@ You can download the documents in plain text format by replacing the Summary too
 
 ## **3.** Focus on topic modeling
 
-Voyant has a topic modeling tool, but it does not appear in any of the five tool areas in the default dashboard. You may also find it difficult to read or focus on the results of a single tool when it is only taking up a fifth of the page.
+Voyant has a topic modeling tool, "Topics," but it does not appear in any of the five tool areas in the default dashboard. You may also find it difficult to read or focus on the results of a single tool when it is only taking up a fifth of the page.
 
-To bring up the topic modeling tool in the entire area of the dashboard, hover over the top right of the dashboard interface in the *blue* header (the icon looks like a window or the ARIA label is "Click to choose another tool for this panel location") and select "Topics" from "Corpus Tools" in the drop-down menu. You can also replace tools in individual panes of the dashboard, but expanding it to fit the entire browser window makes the tool easier to work with; you can return to the original dashbord view by selecting "Corpus View" from the same menu.
+### Zoom in on the Topics tool
+
+To bring up the Topics tool in the entire area of the dashboard: 
+1. hover over the top right of the dashboard interface in the *blue* header (the icon looks like a window or the ARIA label is "Click to choose another tool for this panel location") and,
+2. select "Topics" from "Corpus Tools" in the drop-down menu. 
 
 ![](assets/img/voyant-change-tool.png)
 
 ![](assets/img/voyant-tool-list.png)
 
+You can also replace tools in individual panels of the dashboard, but expanding it to fit the entire browser window makes the tool easier to work with. Return to the original dashbord view by selecting "Corpus View" from the same menu.
+
+### Review the results
+
 The Topics tool will fill the entire browser window, similar or identical to the screenshot below:
 
-![Screenshot of the Topics tool, showing a colour-coded set of topics with their tokens (e.g. public supporting indigenous fight ensure vaccination gender vaccine rights children). On the right is a visualization showing the distribution of the topics in each document of the corpus.](assets/img/voyant-topic-interface.png)
+![Screenshot of the Topics tool, showing a colour-coded set of topics with their tokens (e.g. public supporting indigenous fight ensure vaccination gender vaccine rights children; more topics will be listed later in the text). On the right is a visualization showing the distribution of the topics in each document of the corpus. Each topic is present in each document to varying degrees; some topics are well-represented in one document or another.](assets/img/voyant-topic-interface.png)
 
 The topics (clusters of words) you are presented with are taken from the first 1000 words in each document. The shortest document we are working with (the PPC platform) has almost 10,000 words, so you may want to adjust the number to include a larger portion of each document. You can change the number of terms used per document via the tool options button on at the top right of the screen. 
 
 ![](assets/img/voyant-options-location.png)
 
-Voyant might timeout if you set the number too high, however; moreover, topics can actually become less distinctive when analyzing the entire document, since all parties tend to address the key issues of interest to voters. If we assume that the parties are front-loading their priorities, then the first 1000 or 5000 words will likely produce meaningful topics.
+Voyant might timeout if you set the number too high and topics can actually become less distinctive when analyzing the entire document, since all parties tend to address the key issues of interest to voters. If we assume that the parties are front-loading their priorities, then the first 1000 or 5000 words will likely produce sufficiently meaningful topics.
 
-![](assets/img/voyant-topic-options.png)
+![Screenshot of the options menu containing fields for stopwords, terms per document, iterations and random seed.](assets/img/voyant-topic-options.png)
 
-The option to edit the list of stopwords may be useful if your topics are comprised of terms like "let's" or "it's" and so on. Voyant will automatically remove stopwords during the dashboard creation process, but the list of stopwords is necessarily broad and cannot capture every word that you may wish to leave out of your analysis.
+The option to edit the list of stopwords may be useful if your topics are initially comprised of common terms like "let's" or "it's" and so on. Voyant will automatically remove stopwords during the dashboard creation process, but the list of stopwords is necessarily broad and cannot capture every word that you may wish to leave out of your analysis.
 
-There are also a few parameters at the bottom left of the interface you can adjust with respect to the number of 1) terms per topic, or how many words should appear on each line (10 by default), and 2) topics, or the number of rows of terms (also 10 by default). Experiment with the values - are your topics more coherent, or easier to interpret, when they contain more terms or less? Does there appear to be semantic repetition within topics which could be streamlined with fewer topics?
+### Adjust parameters to refine topics
+
+There are also a few parameters at the bottom left of the interface you can adjust with respect to the number of:
+* terms per topic, or how many words should appear on each line (10 by default), and, 
+* topics, or the number of rows of terms (also 10 by default). 
+
+Experiment with the values - are your topics more coherent, or easier to interpret, when they contain more terms or less? Does there appear to be semantic repetition within topics which could be streamlined with fewer topics?
 
 ![Screenshot of topic parameters: a search bar labeled "search"; a slider button to set the number of terms per topic; a slider button to set the number of topics; a button labeled "Run".](assets/img/voyant-topic-params.png)
 
-You will also note a button in the parameters area labeled "Run." Each time you hit the "Run" button, Voyant attempts "to refine the model of which terms are best suited to which topics (based on co-occurrence in the documents)"[[1]](#1) by iterating the assignment of terms to topics 100 times (by default, can be changed in options as well). Therefore, you might get a different set of results each time you load up your corpus! However, after a few runs, you should notice that the terms no longer vary significantly or at all from run to run. 
+You will also notice a button in the parameters area labeled "Run." Each time you hit the "Run" button, Voyant attempts "to refine the model of which terms are best suited to which topics (based on co-occurrence in the documents)"[[1]](#1) by iterating the assignment of terms to topics 100 times (by default - can be changed in options as well). Therefore, you might get a different set of results each time you load up your corpus! However, after a few runs, you should notice that the terms no longer vary significantly or at all from run to run. 
+
+### Analyze the topics
 
 After our topics have reached a stasis point, we have the following term clusters:
 
@@ -126,17 +142,23 @@ After our topics have reached a stasis point, we have the following term cluster
 * new need people workers better families time democrats future working
 * canada canadian canada’s jobs plan businesses small conservatives business canadians
 
-Again, your topics might not be the same as above! Particularly if we have tweaked our parameters differently. In the topics above, we may have improved our results by changing the tokenization options before uploading the corpus to split tokens at non-letter characters rather than whitespace (i.e. "canada" & "s" vs "canada's"). We might also experiment with different numbers of terms and topics. But we can alraedy start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength.
+Again, your topics might not be the same as above! Particularly if we have each tweaked our parameters differently. In the topics above, we may have improved our results by changing the tokenization options before uploading the corpus to split tokens at non-letter characters rather than whitespace (i.e. "canada" & "s" vs "canada's"). We might also experiment with different numbers of terms and topics. But we can already start to interpret some themes from related words, such as "trade," "money," and "market" in the third topic which we might intepret as prioritizing economic strength.
+
+### Highlight prevalence of a topic in corpus documents
 
 When you have arrived at a set of meaningful, coherent topics that lend themselves to interpretation, you can start to dig deeper into your analysis. You can select a topic on the left side of the screen, and Voyant will highlight their prevalence in each of the documents. 
 
 ![](assets/img/voyant-topic-prevalence.png)
 
-In the visualization above, the cluster "climate change global emissions leader pandemic platform net possible warming" (from a different instance of the model than the topics above) is most prevalent by far in the Green party platform. Given the centrality of environmental issues to the Green party, the prevalence of the topic is not surprising! But there may be interesting areas of overlap between parties to observe as well, or combination of terms within topics.
+In the visualization above, the cluster "climate change global emissions leader pandemic platform net possible warming" (from a different instance of the model than the topics above) is most prevalent by far in the Green party platform. Given the centrality of environmental issues to the Green party, the repeated presence of the topic is not surprising! But there may be interesting areas of overlap between parties to observe as well, or combination of terms within topics.
 
-You can also select any of the documents from the right-side pane to be shown the prevalence of topics within individual texts. Here, the most prevalent topic in the NDP platform is "canadians care need better supporting housing real make families safe." The least prevalent topic in the NDP platform appears most frequently in the plaform of the party at the other end of the political spectrum, the PPC. 
+### Hightlight distribution of topics within specific documents
+
+You can also select any of the documents from the right-side pane to be shown the proportional distribution of topics within individual texts. Here, the most prevalent topic in the NDP platform is "canadians care need better supporting housing real make families safe." The least prevalent topic in the NDP platform appears most frequently in the plaform of the party at the other end of the political spectrum, the PPC. 
 
 ![](assets/img/voyant-topics-document.png)
+
+### Export probablistic weights of topics
 
 The probablistic weights of the topics within the documents can be exported via the export button, which looks like a square with an arrow pointing out of it and has the ARIA label "Export a URL, an embeddable tool, data or a bibliographic reference":
 
@@ -145,6 +167,8 @@ The probablistic weights of the topics within the documents can be exported via 
 From the export menu, select "export current data as tab separated values" - you can copy the values to a spreadsheet and use them, for example, in [a sonification project](learn-more.html).
 
 ![](assets/img/voyant-export-values.png)
+
+## Try it with your data
 
 Try Voyant out with your own pre-processed corpus; if you get so caught up in your analysis that you forget to finish the lesson, we will completely understand :-)
 
