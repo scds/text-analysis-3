@@ -21,9 +21,9 @@ The corpus - or collection of documents - we will be working with in the lesson 
 * 2021 platform - [New Democratic Party](https://xfer.ndp.ca/2021/Commitments/Ready%20for%20Better%20-%20NDP%202021%20commitments.pdf)
 * 2021 platform - [People's Party of Canada](assets/2021-platform_PPC.txt)
 
-On a political spectrum, the Liberal Party would be centre-left while the Conservative Party (CPC) would be centre-right; typically, one or the other party is in power. The New Democratic Party (NDP) has historically been the labour party while the Green Party foregrounds environmental issues; both tend towards progressive policy-making and would be regarded as left of the Liberal Party. The People's Party of Canada (PPC) is a newly established populist party and considered politically right of the CPC.
+On a political spectrum, the Liberal Party is generally thought of as Canada's centre-left party and the Conservative Party (CPC)  as centre-right; typically, one or the other party is in power at the federal level. The New Democratic Party (NDP) has historically been the labour party while the Green Party foregrounds environmental issues; both tend towards progressive policy-making and would be regarded as left of the Liberal Party. The People's Party of Canada (PPC) is a newly established populist party and considered politically right of the CPC.
 
-If you are downloading the PDF files directly, no pre-processing steps will have been performed (the one exception is the People's Party of Canada platform, which was not made available as a single PDF document, and was instead copied from the webpages of a version on the [Internet Archive's Wayback Machine](https://archive.org/web/) crawled the evening before the 2021 federal election). There might be errors in the document as a result of being formatted as a PDF but they are likely to have a negligible effect on our (quick, for demonstration purposes only) analysis.
+If you are downloading the PDF files directly, no pre-processing steps have been performed (the one exception is the People's Party of Canada platform, which was not made available as a single PDF document, and was instead copied from the webpages of a version on the [Internet Archive's Wayback Machine](https://archive.org/web/) crawled the evening before the 2021 federal election). There might be errors in the document as a result of being formatted as a PDF but they are likely to have a negligible effect on our (quick, for demonstration purposes only) analysis.
 
 When working with your own documents, take some time to review them and address spelling errors or other anomalies that may affect your analysis. Topic modeling, like many other computational text analysis techniques, ultimately relies on counting words - and the words must be identical to be counted together (e.g. "labor" and "labour" will be considered two unique words).
 
@@ -31,7 +31,7 @@ When working with your own documents, take some time to review them and address 
 
 ## Get the software
 
-This hands-on workshop uses several tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you. You can skip this step for now, read ahead in the lesson and come back to the "Preparation" page to download applications as necessary.
+This hands-on workshop uses three separate tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you. You can skip this step for now, read ahead in the lesson and come back to the "Preparation" page to download applications as necessary.
 
 [Download Voyant Server](https://voyant-tools.org/docs/#!/guide/server)
 
@@ -41,7 +41,7 @@ This hands-on workshop uses several tools to perform topic modelling: Voyant Too
 
 * If you completed the *[Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/)* workshop, you will already have downloaded Anaconda; you may wish to [update Anaconda](https://docs.anaconda.com/anaconda/install/update-version/) or [uninstall and reinstall it](https://docs.anaconda.com/anaconda/install/uninstall/) if you prefer or if you are getting an error message regarding setup-tools.
 
-**If you are not able to download and/or install Anaconda,** you can alternatively follow the lesson via the [Jupyter notebook version of the workshop in Google Colab](https://colab.research.google.com/drive/1biLTOz5Va-824g7o94Le9QIRM0jxx2ty?usp=sharing). You will need to upload the Douglass text file to the file area in Google Colab as described in [Jay Brodeur's "Basic Text Prep with Python" Colab notebook](https://colab.research.google.com/drive/1ynkHM3WOQUGj9mj8R060p3BYqI6ThbAj?usp=sharing), step 3. Run the code cell by cell using the "play" button at the left of each cell. 
+**If you are not able to download and/or install Anaconda,** you can alternatively follow the lesson via the [Jupyter notebook version of the workshop in Google Colab](https://colab.research.google.com/drive/1biLTOz5Va-824g7o94Le9QIRM0jxx2ty?usp=sharing). You will need to upload the platform text files (after having [exported them from Voyant]([tmv.html#2-explore-the-voyant-dashboard)) to the file area in Google Colab as described in [Jay Brodeur's "Basic Text Prep with Python" Colab notebook](https://colab.research.google.com/drive/1ynkHM3WOQUGj9mj8R060p3BYqI6ThbAj?usp=sharing), step 3. Run the code cell by cell using the "play" button at the left of each cell. 
 
 **If you have programming experience with Python,** you are welcome to use the IDE you are familiar with as an alternative.
 
@@ -57,9 +57,7 @@ For the lesson as it is currently written, the software versions are as follows:
 
 **Anaconda Navigator:** 2.3.2
 
-**Spyder:** 5.4.2
-
-**Voyant Server:** 2.6.3
+**Spyder:** 5.4.3
 
 **MALLET:** 202108
 
