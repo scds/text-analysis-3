@@ -264,7 +264,7 @@ Alternatively, other data practitioners may use the weights assigned to words wi
 Re-type or copy and paste the code below into your script, then run using the `F9` key. It will produce an HTML file (web page) that contains an interactive visualization.
 
     # Output visualization
-    vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15)
+    vis_data = gensimvis.prepare(lda_model, corpus, id2word, R=15, mds='mmds')
     vis_data
     pyLDAvis.display(vis_data)
     pyLDAvis.save_html(vis_data, './topicVis' + str(num_topics) + '.html')
