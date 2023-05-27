@@ -186,9 +186,12 @@ If you have Java 8, 9, 10 or 11 installed on your computer, Voyant Server will b
 
 When Voyant Server runs as smoothly [as its documentation suggests](https://voyant-tools.org/docs/#!/guide/server), it is superior to the web app. But if you encounter technical barriers in using Voyant Server and do not have the time to troubleshoot them, the web app is perfectly viable option for analysis and short-term dissemination. 
 
+<hr />
+
 ## References
 <a id="1">[1]</a>
 "Topics." *Voyant Tools Help*. https://voyant-tools.org/docs/#!/guide/topics. 
+
 
 Next --> [Topic Modeling with MALLET](mallet.html)
 
