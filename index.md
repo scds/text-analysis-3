@@ -14,7 +14,7 @@ When working with texts at scale, we may wish to generalize the "about-ness" of 
 
 Topic modeling is a natural language processing technique that groups words in “topics” based on the frequency of their appearance near each other in a text. It can be used to interpret thematic trends within a large body of text. 
 
-In this workshop, we will introduce topic modeling using three different computational approaches.
+In this workshop, we will introduce topic modeling using three different computational tools.
 
 ## Learning Outcomes
 
