@@ -21,10 +21,11 @@ Jump to step >
 4. [Identify stopwords for the corpus](#4-identify-stopwords-for-the-corpus)
 5. [Tokenize and lemmatize text data, and remove stopwords](#5-tokenize-and-lemmatize-text-data-and-remove-stopwords)
 6. [Preprocess texts using the Gensim library](#6-preprocess-texts-using-the-gensim-library)
-7. [Create a dictionary of words used in the corpus](#7-create-a-dictionary-of-words-used-in-the-corpus)
-8. [Retrieve words from corpus dictionary](#8-retrieve-words-from-corpus-dictionary)
-9. [Create topics in Gensim](#9-create-topics-in-gensim)
-10. [Create topic modeling visualization with LDAvis](#10-create-topic-modeling-visualization-with-ldavis)
+7. [Combine bigrams and trigrams](
+8. [Create a dictionary of words used in the corpus](#7-create-a-dictionary-of-words-used-in-the-corpus)
+9. [Retrieve words from corpus dictionary](#8-retrieve-words-from-corpus-dictionary)
+10. [Create topics in Gensim](#9-create-topics-in-gensim)
+11. [Create topic modeling visualization with LDAvis](#10-create-topic-modeling-visualization-with-ldavis)
 
 <hr />
 
@@ -85,8 +86,12 @@ For the lines of code below to run, the files must end with the `.txt` file exte
 
 The script will also work with a single text file in the "corpus" folder. 
 
+**Important note:** step 3. is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first of the two "file_list" variable assignment statements below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
+
     # Read files from directory and create list from contents
-    file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files
+    # file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files # uncomment for Mac OS or Linux
+    # file_list = glob.glob(r'[path to folder]\*.txt') # uncomment for Windows OS and replace "[path to folder]" with the path to the "corpus" folder
+                                                       # e.g. C:\Users\username\corpus
 
     texts = []
 
@@ -194,7 +199,33 @@ After running the lines of code, head over to the Variable Explorer pane in Spyd
 
 <hr />
 
-## **7.** Create a dictionary of words used in the corpus
+## **7.** Combine bigrams and trigrams
+
+The word "new" may appear frequently in our corpus - but then, one of our documents is the 2021 platform for the *New* Democratic Party. If we do not count instances of "New Democratic Party" in the text, is the term "new" still prevalent?
+
+Bigrams and trigrams are sets of consecutive words - two and three in a row, respectively. If they reoccur multiple times within the text, Gensim will connect them with an underscore ('human_right' or 'streaming_service') when creating the token list to provide additional context around the sense in which the term is being used. The term "high_speed_internet" is more semantically rich than "high," "speed" or "internet" on their own. 
+
+The code below can be attributed to [Selva Prabhakaran](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels). After running the block of code below (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code below (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
+
+    bigram_phrases = gensim.models.Phrases(data_words, min_count=3, threshold=50)
+    trigram_phrases = gensim.models.Phrases(bigram_phrases[data_words], threshold=50)
+
+    bigram = gensim.models.phrases.Phraser(bigram_phrases)
+    trigram = gensim.models.phrases.Phraser(trigram_phrases)
+
+    def make_bigrams(texts):
+        return [bigram[doc] for doc in texts]
+
+    def make_trigrams(texts):
+        return [trigram[bigram[doc]] for doc in texts]
+
+    data_bigrams = make_bigrams(data_words)
+    data_bigrams_trigrams = make_trigrams(data_bigrams)
+
+    # --Uncomment to print list of words showing bigrams and trigrams
+    # print (data_bigrams_trigrams[0])
+
+## **8.** Create a dictionary of words used in the corpus
 
 In order to be able to count the number of times a given word is used, a value needed for topic modeling, we will next create a dictionary from our tokens using the `tuple` data structure in Python (not to be confused with the `dict` or dictionary data structure). A tuple is like a list except that it is immutable - because we do not want our dictionary to change! Our tuple data structure stores two items in a (key, value) pair; e.g. (1, 8). 
 
@@ -211,7 +242,7 @@ Select the lines above within your script and use the `F9` shortcut key to run t
 
 <hr />
 
-## **8.** Retrieve words from corpus dictionary (optional)
+## **9.** Retrieve words from corpus dictionary (optional)
 
 If you wish to make sense of the `corpus` variable's contents, continue with step 8. Otherwise, you can jump ahead to the next step where we will create our topics.
 
@@ -225,7 +256,7 @@ You can remove the lines of code from your script when you are done; they are no
 
 <hr />
 
-## **9.** Create topics in Gensim
+## **10.** Create topics in Gensim
 
 We are finally ready to start working with topics. We will start by creating the groups of words that will form the basis for the topics, and in the next step, we will use the topics to create a visualization.
 
@@ -255,7 +286,7 @@ The second, `passes`, refers to the [number of passes through the corpus during 
 Select the lines of code above and run the using the `F9` key. The first time you run the code will be similar to a round of exploratory data analysis: you might find some interesting results but you are more likely to observe areas for improvement in your preprocessing steps. For example, do you need to go back to step 4. to remove some additional stopwords? Or do you have a lot of noise in the form of shorter terms, which can be addressed in step 6 with `min_len` in Gensim. Make your adjustments, and run the code from the beginning (`F5`).
 <hr />
 
-## **10.** Create topic modeling visualization with LDAvis
+## **11.** Create topic modeling visualization with LDAvis
 
 Visualization offers an analytical modality that may support some researchers' ability to make observations from the data. Taking the topics from the previous step, we will visualize them using the LDAvis library in Python.
 
