@@ -21,11 +21,11 @@ Jump to step >
 4. [Identify stopwords for the corpus](#4-identify-stopwords-for-the-corpus)
 5. [Tokenize and lemmatize text data, and remove stopwords](#5-tokenize-and-lemmatize-text-data-and-remove-stopwords)
 6. [Preprocess texts using the Gensim library](#6-preprocess-texts-using-the-gensim-library)
-7. [Combine bigrams and trigrams](
-8. [Create a dictionary of words used in the corpus](#7-create-a-dictionary-of-words-used-in-the-corpus)
-9. [Retrieve words from corpus dictionary](#8-retrieve-words-from-corpus-dictionary)
-10. [Create topics in Gensim](#9-create-topics-in-gensim)
-11. [Create topic modeling visualization with LDAvis](#10-create-topic-modeling-visualization-with-ldavis)
+7. [Combine bigrams and trigrams](#7-combine-bigrams-and-trigrams)
+8. [Create a dictionary of words used in the corpus](#8-create-a-dictionary-of-words-used-in-the-corpus)
+9. [Retrieve words from corpus dictionary](#9-retrieve-words-from-corpus-dictionary)
+10. [Create topics in Gensim](#10-create-topics-in-gensim)
+11. [Create topic modeling visualization with LDAvis](#11-create-topic-modeling-visualization-with-ldavis)
 
 <hr />
 
@@ -86,7 +86,7 @@ For the lines of code below to run, the files must end with the `.txt` file exte
 
 The script will also work with a single text file in the "corpus" folder. 
 
-**Important note:** step 3. is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first of the two "file_list" variable assignment statements below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
+**Important:** step 3. is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first of the two "file_list" variable assignment statements below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
 
     # Read files from directory and create list from contents
     # file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files # uncomment for Mac OS or Linux
@@ -205,7 +205,7 @@ The word "new" may appear frequently in our corpus - but then, one of our docume
 
 Bigrams and trigrams are sets of consecutive words - two and three in a row, respectively. If they reoccur multiple times within the text, Gensim will connect them with an underscore ('human_right' or 'streaming_service') when creating the token list to provide additional context around the sense in which the term is being used. The term "high_speed_internet" is more semantically rich than "high," "speed" or "internet" on their own. 
 
-The code below can be attributed to [Selva Prabhakaran](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels). After running the block of code below (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code below (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
+The code below is from [Selva Prabhakaran](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels). After running the block of code below (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code below (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
 
     bigram_phrases = gensim.models.Phrases(data_words, min_count=3, threshold=50)
     trigram_phrases = gensim.models.Phrases(bigram_phrases[data_words], threshold=50)
