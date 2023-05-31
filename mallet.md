@@ -13,15 +13,14 @@ MALLET, or **MA**chine **L**earning for **L**anguag**E** **T**oolkit, is an open
 
 If you would prefer to not use a programmming language like Python to perform topic modelling, MALLET is a robust and easy-to-use command line tool that comes with a pre-trained model. You may find MALLET adequate for your purposes and decide not to go any further in the workshop.
 
-Below, we have created videos that take you through the steps of the lesson created by Graham et al. on both a Mac and Windows machine, respectively (as they are slightly different). You can simply go directly to the lesson on the Programming Historian if you prefer a static set of instructions with screenshots to video.
+Below, we have created a video that takes you through the steps of the lesson created by Graham et al. on a Mac OS. On Windows, the commands vary slightly; we will note in the video where there are differences.
+
+You can also simply go directly to the lesson on the Programming Historian if you prefer a static set of instructions with screenshots to video.
 
 <hr />
 ## Using MALLET on a Mac
 
 <hr />
 
-## Using MALLET on Windows
-
-<hr />
 
 Next --> [Topic Modeling with Python](tmpython.html)
