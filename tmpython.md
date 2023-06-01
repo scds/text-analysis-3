@@ -30,9 +30,11 @@ Jump to step >
 <hr />
 
 ## **1.** Install the required packages
-Our Python script is dependent on a few external packages that are not by default installed on Anaconda. We must install them before we can start writing our script, as our next step is to import them!
+Our Python script is dependent on a few external packages that are not installed on Anaconda by default. We must install them before we can start writing our script, as our next step is to import them!
 
 Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
+
+![](assets/img/py-restart-kernel.png)
 
 * Install SpaCy to preprocess the text data<br>
 `pip install spacy`
@@ -45,6 +47,8 @@ Type (or copy-paste) each of the commands below in the iPython console, which - 
 
 * Install pyLDAvis to create a visualization of the topics<br>
 `pip install pyLDAvis`
+
+![](assets/img/py-install-libs.png)
 
 <hr />
 
@@ -70,10 +74,12 @@ Begin by creating a new file in Spyder. After the initial code comments that Spy
     # Import external libraries: pyLDA for vis
     import pyLDAvis
     import pyLDAvis.gensim_models as gensimvis
-
+    
 You will note in the code above there is the option of working with texts in languages other than English.
 
 If you have not saved the script yet, go ahead and do so. Make a note of where you are saving the script, because you will need to save your text data relative to where the script is located as described below.
+
+![](assets/img/py-import.png)
 
 <hr />
 
