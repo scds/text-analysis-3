@@ -178,7 +178,7 @@ Otherwise, let us try our next approach: topic modeling with the command-line to
 
 ## Voyant Tools Server
 
-Voyant Tools has a downloadable version of the application available in the form of [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
+Voyant Tools has a downloadable version of the application available in the form of [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5) (download and unzip .zip file). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
 
 Using Voyant Server is the preferred approach if you will be working with very large corpora or if you are working with documents that should not be publically accessible due to privacy or copyright concerns (although you can password protect your corpus). One drawback of Voyant Server, however, is that it relies on a very narrow window of Java versions - between Java 8 and Java 11.
 
