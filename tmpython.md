@@ -112,7 +112,7 @@ You will likely need to adjust the encoding value, based on the encoding of your
 If you do not know the encoding of your text files, you can check it in:
 
 1. Windows OS: open the file in Notepad (default text editor in Windows) and then use the "Save as..." command - the current encoding will be visible in the area where you can specify the encoding of the new file (you do not need to actually save the file, we are just checking the encoding) 
-2. Mac OS: in the TextEdit application (default text editor in Mac), \[reference: https://support.apple.com/en-ca/guide/textedit/txted1028/mac]
+2. Mac OS: using the TextEdit application (default text editor in Mac), you can set the encoding (we recommend UTF-8) following the directions on the [Apple support website](https://support.apple.com/en-ca/guide/textedit/txted1028/mac) under the "Choose a different encoding for one document" heading
 
 Use the F5 key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab in the Spyder IDE), new variables named `file_list` and `texts` should appear with expected text data values.
 
