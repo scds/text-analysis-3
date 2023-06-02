@@ -35,9 +35,7 @@ When working with your own documents, take some time to review them and address 
 
 This hands-on workshop uses three separate tools to perform topic modelling: Voyant Tools, MALLET and Python. You do not have to use all of them, but the intent is for you to get a sense of each with a small sample from your own corpus so that you can choose an approach that works best for you. You can skip this step for now, read ahead in the lesson and come back to the "Preparation" page to download applications as necessary.
 
-[Download Voyant Server](https://voyant-tools.org/docs/#!/guide/server)
-
-[Download MALLET](https://mimno.github.io/Mallet/)
+[Download MALLET](https://mallet.cs.umass.edu/download.php)
 
 [Download Anaconda](https://www.anaconda.com/products/individual)* (includes Spyder, integrated development environment - or IDE - for Python).
 
@@ -61,9 +59,9 @@ For the lesson as it is currently written, the software versions are as follows:
 
 **Spyder:** 5.4.3
 
-**MALLET:** 202108
+**MALLET:** 2.0.8 (not the most current version for reasons that will be explained in the lesson)
 
-If the versions differ from your own, that's ok! There's no need to track down older versions of the software to complete the lesson. The steps should remain the same, but there might be some small variations that can be attributed to using a later version (with the exception of your Python version, which \*might\* break the code; Python 3.9 will be supported until October 2025).
+If the versions differ from your own, that's ok! There's no need to track down older versions of the software to complete the lesson (with the exception of MALLET). The steps should remain the same, but there might be some small variations that can be attributed to using a later version (with the exception of your Python version, which \*might\* break the code; Python 3.9 will be supported until October 2025).
 
 <hr />
 
