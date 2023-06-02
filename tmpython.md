@@ -92,7 +92,7 @@ For the lines of code below to run, the files must end with the `.txt` file exte
 
 The script will also work with a single text file in the "corpus" folder. 
 
-**Important:** step 3. is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first of the two "file_list" variable assignment statements below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
+**Important:** step 3 is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first "file_list" variable assignment statement below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
 
     # Read files from directory and create list from contents
     # file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files # uncomment for Mac OS or Linux
