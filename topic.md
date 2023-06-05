@@ -71,11 +71,11 @@ As you work through the lesson, consider how the process described above maps to
 
 ## References
 
-<a id="1">\[1]</a>Ignatow, G., & Mihalcea, R. (2018). *An introduction to text mining : research design, data collection, and analysis.* SAGE Publications, Inc.
+<a id="1">\[1] </a>Ignatow, G., & Mihalcea, R. (2018). *An introduction to text mining : research design, data collection, and analysis.* SAGE Publications, Inc.
 
-<a id="2">\[2]</a>Graham, S., Weingart, S., & Milligan, I. (2012). Getting started with topic modeling and MALLET. *Programming Historian.* https://programminghistorian.org/en/lessons/topic-modeling-and-mallet.
+<a id="2">\[2] </a>Graham, S., Weingart, S., & Milligan, I. (2012). Getting started with topic modeling and MALLET. *Programming Historian.* https://programminghistorian.org/en/lessons/topic-modeling-and-mallet.
 
-<a id="3">\[3]</a>Underwood, T. (2012). Topic modeling made just simple enough. *Using large digital libraries to advance literary history*. https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/.
+<a id="3">\[3] </a>Underwood, T. (2012). Topic modeling made just simple enough. *Using large digital libraries to advance literary history*. https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/.
 
 <br />
 
