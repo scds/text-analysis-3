@@ -37,7 +37,10 @@ import pyLDAvis
 import pyLDAvis.gensim_models as gensimvis
 
 # Read files from directory and create list from contents
-file_list = glob.glob('./texts' + '/*.txt') # directory containing text (.txt) files
+# Varies between Mac and Windows OS; uncomment the line as appropriate 
+# file_list = glob.glob('./corpus' + '/*.txt') # directory containing text (.txt) files # uncomment for Mac OS or Linux
+# file_list = glob.glob(r'[path to folder]\*.txt') # uncomment for Windows OS and replace "[path to folder]" with the path to the "corpus" folder
+                                                   # e.g. C:\Users\username\corpus
 
 texts = []
 
@@ -93,10 +96,6 @@ data_words = gen_words(lemmatized_texts)
 # --Uncomment line below to print contents of the data_words variable
 # print(data_words[0][0:20])
 
-
-"""
-
-# Account for bigrams and trigrams - Prabhakaran via Mattingly, https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels
 bigram_phrases = gensim.models.Phrases(data_words, min_count=3, threshold=50)
 trigram_phrases = gensim.models.Phrases(bigram_phrases[data_words], threshold=50)
 
@@ -104,16 +103,16 @@ bigram = gensim.models.phrases.Phraser(bigram_phrases)
 trigram = gensim.models.phrases.Phraser(trigram_phrases)
 
 def make_bigrams(texts):
-    return (bigram[doc] for doc in texts)
+    return [bigram[doc] for doc in texts]
 
 def make_trigrams(texts):
-    return (trigram[bigram[doc]] for doc in texts)
+    return [trigram[bigram[doc]] for doc in texts]
 
 data_bigrams = make_bigrams(data_words)
 data_bigrams_trigrams = make_trigrams(data_bigrams)
 
-print (data_bigrams_trigrams[0])
-"""
+# --Uncomment to print list of words showing bigrams and trigrams
+# print (data_bigrams_trigrams[0])
 
 # Create dictionary of all words in texts
 id2word = corpora.Dictionary(data_words)
