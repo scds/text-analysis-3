@@ -213,7 +213,7 @@ The word "new" may appear frequently in our corpus - but then, one of our docume
 
 Bigrams and trigrams are sets of consecutive words - two and three in a row, respectively. If they reoccur multiple times within the text, Gensim will connect them with an underscore ('human_right' or 'streaming_service') when creating the token list to provide additional context around the sense in which the term is being used. The term "high_speed_internet" is more semantically rich than "high," "speed" or "internet" on their own. 
 
-The code below is from [Selva Prabhakaran](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels). After running the block of code below (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code below (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
+The code below is from [Selva Prabhakaran](https://www.machinelearningplus.com/nlp/topic-modeling-gensim-python/#9createbigramandtrigrammodels).
 
     bigram_phrases = gensim.models.Phrases(data_words, min_count=3, threshold=50)
     trigram_phrases = gensim.models.Phrases(bigram_phrases[data_words], threshold=50)
@@ -232,6 +232,10 @@ The code below is from [Selva Prabhakaran](https://www.machinelearningplus.com/n
 
     # --Uncomment to print list of words showing bigrams and trigrams
     # print (data_bigrams_trigrams[0])
+
+After running the block of code above (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
+
+![](assets/img/py-bigrams.png)
 
 ## **8.** Create a dictionary of words used in the corpus
 
