@@ -107,6 +107,8 @@ The script will also work with a single text file in the "corpus" folder.
 
     print(texts[0]) # print the first .txt file in the list to confirm
 
+![](assets/img/py-glob.png)
+
 You will likely need to adjust the encoding value, based on the encoding of your text files. You can look up how to specify other encodings in Python using the [Standard Encodings table](https://docs.python.org/3/library/codecs.html#standard-encodings); the value to replace in your script can be found in the "Codec" column of the table (e.g. `'mac-roman'`, `'latin-1'`). 
 
 If you do not know the encoding of your text files, you can check it in:
@@ -114,7 +116,7 @@ If you do not know the encoding of your text files, you can check it in:
 1. Windows OS: open the file in Notepad (default text editor in Windows) and then use the "Save as..." command - the current encoding will be visible in the area where you can specify the encoding of the new file (you do not need to actually save the file, we are just checking the encoding) 
 2. Mac OS: using the TextEdit application (default text editor in Mac), you can set the encoding (we recommend UTF-8) following the directions on the [Apple support website](https://support.apple.com/en-ca/guide/textedit/txted1028/mac) under the "Choose a different encoding for one document" heading
 
-Use the F5 key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab in the Spyder IDE), new variables named `file_list` and `texts` should appear with expected text data values.
+Use the `F5` key to run the script thus far in the console. In the console area, the text from the first document should print. In the variable explorer pane (top right, second tab in the Spyder IDE), new variables named `file_list` and `texts` should appear with expected text data values.
 
 <hr />
 
@@ -137,7 +139,7 @@ Most of the code below is commented out, i.e. preceded by `#`. To add stopwords 
     # Print to confirm that your word has been added or removed
     # print(STOP_WORDS)
 
-Again, use the F5 key to run the script in the console.
+Again, use the `F5` key to run the script in the console.
 
 <hr />
 
