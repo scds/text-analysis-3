@@ -115,11 +115,11 @@ data_bigrams_trigrams = make_trigrams(data_bigrams)
 # print (data_bigrams_trigrams[0])
 
 # Create dictionary of all words in texts
-id2word = corpora.Dictionary(data_words)
+id2word = corpora.Dictionary(data_bigrams_trigrams)
 
 # Represent dictionary words as tuples (index, frequency)
 corpus = []
-for text in data_words:
+for text in data_bigrams_trigrams:
     new = id2word.doc2bow(text)
     corpus.append(new)
 
