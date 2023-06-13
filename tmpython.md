@@ -236,11 +236,11 @@ The code below is from [Selva Prabhakaran](https://www.machinelearningplus.com/n
 In order to be able to count the number of times a given word is used, a value needed for topic modeling, we will next create a dictionary from our tokens using the `tuple` data structure in Python (not to be confused with the `dict` or dictionary data structure). A tuple is like a list except that it is immutable - because we do not want our dictionary to change! Our tuple data structure stores two items in a (key, value) pair; e.g. (1, 8). 
 
     # Create dictionary of all words in texts
-    id2word = corpora.Dictionary(data_words)
+    id2word = corpora.Dictionary(data_bigrams_trigrams)
 
     # Represent dictionary words as tuples (index, frequency)
     corpus = []
-    for text in data_words:
+    for text in data_bigrams_trigrams:
         new = id2word.doc2bow(text)
         corpus.append(new)
 
