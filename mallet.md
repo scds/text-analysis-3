@@ -39,7 +39,7 @@ In the same folder, **make a copy** of the `en.txt` file and call it `en-custom.
 
 ![](assets/img/mallet-list.png)
 
-With our stoplist file created, we can now import our directory of files as described in the video above and in Graham, Weinhart and Milligan's lesson on the Programming Historian. At the end of the command, add `--stoplist-file stoplist\en-custom.txt` (recalling that you will use forward slashes on a Mac). We are specifying the file with the list of stopwords that we created, and including the name of the containing folder - "stoplist" - points MALLET to where to find it.
+With our stoplist file created, we can now import our directory of files as described in the video above and in Graham, Weinhart and Milligan's lesson on the Programming Historian. At the end of the command, add `--stoplist-file stoplist\en-custom.txt` (recalling that you will use forward slashes on a Mac). We are specifying the file with the list of stopwords that we created, and including the name of the containing folder - "stoplists" - points MALLET to where to find it.
 
 ![](assets/img/mallet-stopcmd.png)
 
