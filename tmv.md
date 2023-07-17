@@ -27,6 +27,8 @@ Jump to step >
 
 ## **1.** Upload documents
 
+<div style="max-width:608px"><div style="position:relative;padding-bottom:66.118421052632%"><iframe id="kmsembed-1_2q8f1kl3" width="608" height="402" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_2q8f1kl3/uiConfId/52291842/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Uploading Documents to Voyant Tools" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+
 We will first upload the documents to Voyant Tools. The Voyant Tools homepage is very simple in its design and, again, does not prompt you to do anything or provide any information aside from the documents of the corpus itself:
 
 ![Screenshot of Voyant homepage, which is primarily blank except for a rectangle at the center of the page that reads "Add texts" with a large blue "Reveal" button and, at the top of a page, a large Voyant Tool logo where the "O" in Voyant is an adorable cartoon owl.](assets/img/voyant-home.png)
@@ -52,6 +54,8 @@ When you have selected your documents, Voyant will set about creating the dashbo
 <hr />
 
 ## **2.** Explore the Voyant dashboard
+
+<div style="max-width:608px"><div style="position:relative;padding-bottom:66.118421052632%"><iframe id="kmsembed-1_c2rcobfo" width="608" height="402" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_c2rcobfo/uiConfId/52291842/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Text Analysis in the Voyant Dashbord" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
 You will eventually be directed to the Voyant dashboard with your documents loaded, which will appear similar to the screenshot below:
 
@@ -82,6 +86,8 @@ You can download the documents in plain text format by replacing the Summary too
 <hr />
 
 ## **3.** Focus on topic modeling
+
+
 
 Voyant has a topic modeling tool, "Topics," but it does not appear in any of the five tool areas in the default dashboard. You may also find it difficult to read or focus on the results of a single tool when it is only taking up a fifth of the page.
 
