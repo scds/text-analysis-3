@@ -27,15 +27,15 @@ The two command lines used in the video are:
 
 Import the documents contained in the specified directory (folder) into MALLET format -
 
-Mac OS: `./bin/mallet import-dir --input text-data/*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
+**Mac OS:** `./bin/mallet import-dir --input text-data/*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
 
-Windows OS: `bin\mallet import-dir --input text-data\*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
+**Windows OS:** `bin\mallet import-dir --input text-data\*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
 
 Train and output a topic model using the .mallet file -
 
-Mac OS: `./bin/mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
+**Mac OS:** `./bin/mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
 
-Windows OS: `bin\mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
+**Windows OS:** `bin\mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
 
 <hr />
 
