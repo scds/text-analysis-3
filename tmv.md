@@ -87,7 +87,7 @@ You can download the documents in plain text format by replacing the Summary too
 
 ## **3.** Focus on topic modeling
 
-
+<div style="max-width:608px"><div style="position:relative;padding-bottom:66.118421052632%"><iframe id="kmsembed-1_h3cc75kr" width="608" height="402" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_h3cc75kr/uiConfId/52291842/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Topic Modeling with Voyant Tools" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
 Voyant has a topic modeling tool, "Topics," but it does not appear in any of the five tool areas in the default dashboard. You may also find it difficult to read or focus on the results of a single tool when it is only taking up a fifth of the page.
 
