@@ -39,12 +39,13 @@ In the same folder, **make a copy** of the `en.txt` file and call it `en-custom.
 
 ![](assets/img/mallet-list.png)
 
-With our stoplist file created, we can now import our directory of files as described in the video above and in Graham, Weinhart and Milligan's lesson on the Programming Historian. At the end of the command, add `--stoplist-file stoplist\en-custom.txt` (recalling that you will use forward slashes on a Mac). We are specifying the file with the list of stopwords that we created, and including the name of the containing folder - "stoplists" - points MALLET to where to find it.
+With our stoplist file created, we can now import our directory of files as described in the video above and in Graham, Weinhart and Milligan's lesson on the Programming Historian. At the end of the command, add `--stoplist-file stoplist\en-custom.txt` (recalling that you will use forward slashes on a Mac). We are specifying the file with the list of stopwords that we created, and including the name of the containing folder -- "stoplists" -- points MALLET to where to find it.
 
 ![](assets/img/mallet-stopcmd.png)
 
-**Important note:** MALLET's primary maintainer David Mimno recommends *against* using the `--stoplist-file` option with `--remove-stopwords` because "[using both options will remove the union of the two lists](https://stackoverflow.com/questions/48121694/mallet-topic-modeling-remove-most-common-words)" or the terms that appear in both lists. Run the `train-topics` command with the .mallet file you created and verify your results - the stopwords you added should no longer appear in your topics! 
+**Important note:** MALLET's primary maintainer David Mimno recommends *against* using the `--stoplist-file` option with `--remove-stopwords` because "using both options will remove the union of the two lists" ([Stack Overflow](https://stackoverflow.com/questions/48121694/mallet-topic-modeling-remove-most-common-words)) or the terms that appear in both lists. 
 
+Run the `train-topics` command with the .mallet file you created and verify your results - the stopwords you added should no longer appear in your topics! 
 
 <hr />
 
