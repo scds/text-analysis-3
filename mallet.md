@@ -21,7 +21,17 @@ Below, we have created a video that takes you through the steps of the lesson cr
 
 ## Using MALLET on a Mac
 
-video
+<div style="max-width:608px"><div style="position:relative;padding-bottom:66.118421052632%"><iframe id="kmsembed-1_l69p0ozr" width="608" height="402" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_l69p0ozr/uiConfId/52291842/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Topic Modeling with MALLET" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+
+The two command lines used in the video are:
+
+Import the documents contained in the specified directory (folder) into MALLET format -
+Mac OS: `./bin/mallet import-dir --input text-data/*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
+Windows OS: `bin\mallet import-dir --input text-data\*directory-name* --output *filename*.mallet --keep-sequence --remove-stopwords`
+
+Train and output a topic model using the .mallet file -
+Mac OS: `./bin/mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
+Windows OS: `bin\mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
 
 <hr />
 
