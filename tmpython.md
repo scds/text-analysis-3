@@ -13,6 +13,8 @@ You can compare the results that you get from running the script in Jupyter Note
 
 <hr />
 
+<div style="max-width:608px"><div style="position:relative;padding-bottom:66.118421052632%"><iframe id="kmsembed-1_gefaq7p1" width="608" height="402" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_gefaq7p1/uiConfId/52291842/st/0" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Topic Modeling with Python" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+
 Jump to step >
 
 1. [Install the required packages](#1-install-the-required-packages)
