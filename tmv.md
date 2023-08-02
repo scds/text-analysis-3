@@ -69,7 +69,7 @@ The Summary tool in the bottom left corner gives us an overview of the text data
 
 ![](assets/img/voyant-summary.png)
 
-For the Green Party, "reen" and "inctive" are distinctive words within the document... but not common words within the English language (or even a word at all, in the case of "inctive"). Using the Reader tool, found at the centre of the top row of tools, we can search for "reen" and observe a formatting error in the PDF related to a reoccurring header - that we would probably want to omit from our analysis anyway.
+For the Green Party, "reen" and "ignity" are distinctive words within the document... but not common words within the English language (or even a word at all, in the case of "ignity"). Using the Reader tool, found at the centre of the top row of tools, we can search for "reen" and observe a formatting error in the PDF related to a reoccurring header - that we would probably want to omit from our analysis anyway.
 
 ![](assets/img/voyant-reader.png)
 
