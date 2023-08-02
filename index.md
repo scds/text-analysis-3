@@ -6,7 +6,6 @@ nav_order: 1
 ---
 
 # Welcome to Exploring Themes with Topic Modeling
-(in development)
 
 ***Exploring Themes with Topic Modeling* belongs to a series of workshops on computational text analysis.**
 
