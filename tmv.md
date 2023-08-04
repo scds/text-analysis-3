@@ -174,15 +174,9 @@ From the export menu, select "export current data as tab separated values" - you
 
 ![](assets/img/voyant-export-values.png)
 
-## Try it with your data
-
-Try Voyant out with your own pre-processed corpus; if you get so caught up in your analysis that you forget to finish the lesson, we will completely understand :-)
-
-Otherwise, let us try our next approach: topic modeling with the command-line tool, MALLET!
-
 <hr />
 
-## Voyant Tools Server
+## Try it with your data: Voyant Tools Server
 
 Voyant Tools has a downloadable version of the application available in the form of [Voyant Server](https://github.com/voyanttools/VoyantServer/releases/tag/2.6.5) (download and unzip .zip file). Voyant Server can be run from your computer without an Internet connection, and accessed via your web browser. The user experience of Voyant Server is identical to that of the web app we used in the previous section.
 
@@ -191,6 +185,10 @@ Using Voyant Server is the preferred approach if you will be working with very l
 If you have Java 8, 9, 10 or 11 installed on your computer, Voyant Server will be relatively easy to use. Otherwise, you may need to run multiple versions of Java on your machine - which is doable! - but more involved. Refer to instructions on running multiple versions of Java [in Windows (Sven Woltmann)](https://www.happycoders.eu/java/how-to-switch-multiple-java-versions-windows/) or [on Mac (Jayson Minard on StackOverflow)](https://stackoverflow.com/questions/52524112/how-do-i-install-java-on-mac-osx-allowing-version-switching/52524114#52524114).
 
 When Voyant Server runs as smoothly [as its documentation suggests](https://voyant-tools.org/docs/#!/guide/server), it is superior to the web app. But if you encounter technical barriers in using Voyant Server and do not have the time to troubleshoot them, the web app is perfectly viable option for analysis and short-term dissemination. 
+
+Try Voyant out -- either the web app or server version -- with your own pre-processed corpus; if you get so caught up in your analysis that you forget to finish the lesson, we will completely understand :-)
+
+Otherwise, let us try our next approach: topic modeling with the command-line tool, MALLET!
 
 <hr />
 
