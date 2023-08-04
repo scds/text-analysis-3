@@ -317,5 +317,13 @@ Re-type or copy and paste the code below into your script, then run using the `F
 The topicVis*n*.html file, where *n* is the number of topics set in `num_topics` from the previous step, will be created in the same directory (folder) as the Python script you have been working on. It may take a few minutes for it to appear.
 <hr />
 
+## Try it with your data: Experimenting with R
+
+Python is one of several programming languages you can use for topic modeling. Another option is R, a programming language used primarily by data scientists. If you plan to work extensively with your own data, you may also want to investigate and compare results between the script above and some of the topic modeling libraries available in R. We did not cover R in the lesson because there are already a number of great tutorials available, which you can access from the "[Topic Modeling with R](learn-more.html#topic-modeling-in-r)" section of the "Learn More" page.
+
+Just as we used Spyder to write our Python script, you will likely want to work with R through RStudio, an integrated development environtment (IDE) for R. While it is possible to install RStudio on Anaconda, it is not officially supported and the version of RStudio available for Anaconda is several years old. It is better, then, to install RStudio directly on your machine (unless you prefer working with a web-based notebook, and there is an option for that in the "Topic Modeling with R" resources). You will need to [download both R and RStudio](https://posit.co/download/rstudio-desktop/), just as we needed both Python and Spyder for the lesson (Anaconda simply installed Python for us in the background).
+
+Happy topic modeling!
+
 <br />
 Next --> 
