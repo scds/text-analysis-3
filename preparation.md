@@ -69,7 +69,9 @@ If the versions differ from your own, that's ok! There's no need to track down o
 
 In advance of the lesson, we also recommend that you assemble a collection of documents to work with for the *Try it with your data* sections. We will use the texts provided above to practice the techniques demonstrated in the lesson but each dataset brings its own unique features. Even if you are not going through the lesson with a specific project in mind, having a different corpus to experiment with will help to reinforce the concepts and enrich your knowledge of the topic.
 
-If you have not already gone through your corpus to get a sense of what errors it might contain, now is a good time! If key words are misspelled, they may not be emerge as relevant themes through topic modelling.
+If you have not already gone through your corpus to get a sense of what errors it might contain, now is a good time! If key words are misspelled, they may not be emerge as relevant themes through topic modeling.
+
+**Note:** as a consideration in assembling and/or preparing your corpus, topic modeling tends to work better with a collection of short documents.
 
 <br />
 Next --> [Start the Topic Modeling Lesson](instructions.html)
