@@ -4,7 +4,7 @@ title: Learn More
 nav_order: 5
 ---
 
-# Learn more
+# Learn More
 If you would like to take your learning further, we have provided some additional resources below:
 ## Diving Deeper into Topic Modeling
 
