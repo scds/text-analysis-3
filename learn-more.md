@@ -9,7 +9,9 @@ If you would like to take your learning further, we have provided some additiona
 
 ## Diving Deeper into Topic Modeling
 
-In the lesson, we briefly discussed how topic modeling works without getting into the mathematical basis for the practice. Latent Dirchlet allocation (LDA) [David M. Blei, Andrew Y. Ng and Michael I. Jordan] (https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf).   including [an interesting article](https://mimno.infosci.cornell.edu/papers/schofield_eacl_2017.pdf) that suggests removing stopwords *after* training is as effective as removing them before, by Alexandra Schofield, M˚ans Magnusson and David Mimno (yes, the David Mimno who is the primary maintainer of MALLET). 
+In the lesson, we briefly discussed how topic modeling works without getting into the mathematical basis for the practice. David Blei gives [an overview of topic modeling](https://journalofdigitalhumanities.org/2-1/topic-modeling-and-digital-humanities-by-david-m-blei/), with a plain language description of latent Dirchlet allocation (LDA), in the Winter 2012 issue of the Journal of Digital Humanities. The entire issue of the journal is dedicated to topic modeling and may also be of interest!
+
+If you wish to read more about the specifics of LDA, the [seminal article](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf) by [David M. Blei, Andrew Y. Ng and Michael I. Jordan is a good place to start. Or, if you prefer to head off on a tangent that might enrich your understanding, Alexandra Schofield, Måns Magnusson and David Mimno (yes, the David Mimno who is the primary maintainer of MALLET) have written [a provocative paper](https://mimno.infosci.cornell.edu/papers/schofield_eacl_2017.pdf) that suggests removing stopwords *after* training is as effective as removing them before in topic modeling. 
 
 ## Building on your Topic Modeling Skills in Python
 
@@ -17,15 +19,15 @@ If you already familiar or have enjoyed working with Python, William J.B. Mattin
 
 If you wish to continue using Gensim for topic modeling, however, you may wish to [explore the Gensim documentation](https://radimrehurek.com/gensim/models/ldamodel.html) further.
 
- ## Alternatives to Visualizing Topic Modeling Values
+## Topic Modeling in R
+
+We used the Python programming language for topic modeling but if you are more familiar or comfortable with the R programming language, which is popular in academic and data science contexts, there are an abundance of resources to guide you:
+
+* Julia Silge's video on [Topic modeling with R and tidy data principles](https://www.youtube.com/watch?v=evTuL-RcRpc) (uses the [tidytext](https://juliasilge.github.io/tidytext/reference/index.html) -- developed by Silge -- and [stm](https://cran.r-project.org/web/packages/stm/index.html) packages)
+* [A series of R tutorials](https://github.com/ccs-amsterdam/r-course-material/tree/master) from a team at Vrije Universiteit Amsterdam, including [Fitting LDA models in R](https://github.com/ccs-amsterdam/r-course-material/blob/master/tutorials/r_text_lda.md) with [an accompanying video](https://www.youtube.com/watch?v=4YyoMGv1nkc) (uses the [quanteda](https://quanteda.io/) and [topicmodels](https://www.rdocumentation.org/packages/topicmodels/versions/0.2-8) packages)
+* Thomas W. Jones' [textmineR library](https://cran.r-project.org/web/packages/textmineR/vignettes/c_topic_modeling.html), which allows for the use of different modeling techniques including and beyond LDA.
+
+There is much more out there if R is your language of choice!
+
+## Alternatives to Visualizing Topic Modeling Values
 Visualization is one modality for exploratory data analysis, but it privileges the visual sense and may not be accessible for all audiences. Shawn Graham has created a [Programming Historian lesson on sonification](https://programminghistorian.org/en/lessons/sonification), or the mapping of dataset features to sound. Graham demonstrates several tools for sonifying data in the lesson, and [the part of the lesson that explores Sonic Pi](https://programminghistorian.org/en/lessons/sonification#sonic-pi) uses the probalistic weights of topics from a topic model - data that you will have available to try out from your experiments with Voyant, MALLET and Gensim.
-
-<!--
-
-## More info and other tools
-
-- Tableau [free training videos](https://www.tableau.com/learn/training/20201)
-- LinkedIn Learning [Tableau training page](https://www.linkedin.com/learning/topics/tableau)
-- Data visualization design considerations for beginners: [Berkeley Library](https://guides.lib.berkeley.edu/data-visualization/design) | [University of Guelph Library](https://guides.lib.uoguelph.ca/c.php?g=700755&p=4976239)
-
--->
