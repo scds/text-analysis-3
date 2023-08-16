@@ -1,11 +1,22 @@
 ---
 layout: default
-title: Learn More
-nav_order: 5
+title: Conclusion & Additional Resources
+nav_order: 6
 ---
 
-# Learn More
-If you would like to take your learning further, we have provided some additional resources below:
+# Congratulations
+
+<!-- Edit this line to mention your workshop name -->
+**Congratulations!** You've just finished this workshop.
+
+You should now be able to:
+- Define topic modeling
+- Use at least one tool to perform topic modeling on a text corpus
+- Explain the limitations of topic modeling
+
+# Additional Resources
+To learn more about any particular topic, take a look at the links below.
+
 ## Diving Deeper into Topic Modeling
 
 In the lesson, we briefly discussed how topic modeling works without getting into the mathematical basis for the practice. David Blei gives [an overview of topic modeling](https://journalofdigitalhumanities.org/2-1/topic-modeling-and-digital-humanities-by-david-m-blei/), with a plain language description of latent Dirchlet allocation (LDA), in the Winter 2012 issue of the Journal of Digital Humanities. The entire issue of the journal is dedicated to topic modeling and may also be of interest!
