@@ -38,7 +38,7 @@ Voyant can read text from [a wide number of file formats](https://voyant-tools.o
 
 In the options menu, you will also note the ability to manage access to a corpus by creating a password. You may wish to explore the other options in the menu working with your own corpus; being able to start and / or stop reading when Voyant encounters a specified regular expression, for example, is helpful when working with texts that have preambles or postscripts you want to ignore in your analysis (e.g. files from Project Gutenberg).
 
-{: important } 
+{: .important } 
 > If you need to set options, do so *before* uploading your documents. You will not be able to go back to the options menu after the dashboard is created, a process that begins as soon as the documents are uploaded.  
 
 We will be using our own texts ("Upload") and not the pre-loaded corpora ("Open"), so Voyant will prompt us to upload them using a system dialog box. You can select multiple files by selecting the first file, holding the Shift key and selecting the last file in your list of documents. If you miss or forget a document, there will be an option to upload additional documents from the Voyant dashboard.
