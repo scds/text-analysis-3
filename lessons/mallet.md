@@ -48,15 +48,19 @@ In MALLET, you remove stopwords during the import process - before you create th
 
 The stopword list that MALLET uses when importing files or directories can be found in the MALLET directory, the folder that you downloaded and unzipped from the MALLET website. In the MALLET directory, locate the folder called "stoplists" which contains plain text files (.txt file extension) with lists of stopwords for various languages. If your corpus contains English-language documents, you can open the `en.txt` file with a text editor if you would like to get a sense of what the default list contains - you should **not** make any changes to the file, however.
 
-<img src="../assets/img/mallet/mallet-stoplist-dir.png" width="100%">
+<img src="../assets/img/mallet/mallet-stoplist-dir.png" alt="the file explorer window showing the location of the different locales for stop-words -- [MALLET LOCATION]\mallet-2.0.8\stoplists" width="100%">
 
 In the same folder, **make a copy** of the `en.txt` file and call it `en-custom.txt`. On a new line in the document, put the stopword(s) you would like to omit from the topic model. For demonstration purposes, I used 'canada' because it occurs commonly across all of the texts. Of course, we would probably not want to remove 'canada' when topic modeling the political party platforms corpus, as it might appear more frequently in platforms that wish to project a sense of patriotism - which would be of interest in our analysis.
 
-<img src="../assets/img/mallet/mallet-list.png" width="75%">
+<img src="../assets/img/mallet/mallet-list.png" alt="screenshot of the list of english stopwards copied into  the 'en-custom.txt' file" width="75%">
 
 With our stoplist file created, we can now import our directory of files as described in the video above and in Graham, Weinhart and Milligan's lesson on the Programming Historian. At the end of the command, add `--stoplist-file stoplist\en-custom.txt` (recalling that you will use forward slashes on a Mac). We are specifying the file with the list of stopwords that we created, and including the name of the containing folder -- "stoplists" -- points MALLET to where to find it.
 
-<img src="../assets/img/mallet/mallet-stopcmd.png" width="100%">
+<img src="../assets/img/mallet/mallet-stopcmd.png" alt="screenshot of the console with the line of code shown below" width="100%">
+
+```bash
+bin\mallet import-dir --input text-data\platforms --output platforms.mallet --keep-sequence --stoplist-file stoplists\en-custom.txt
+```
 
 {: .important }
 > MALLET's primary maintainer David Mimno recommends *against* using the `--stoplist-file` option with `--remove-stopwords` because "using both options will remove the union of the two lists" ([Stack Overflow](https://stackoverflow.com/questions/48121694/mallet-topic-modeling-remove-most-common-words)) or the terms that appear in both lists. 

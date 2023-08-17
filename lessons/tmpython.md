@@ -39,7 +39,7 @@ Our Python script is dependent on a few external packages that are not installed
 
 Type (or copy-paste) each of the commands below in the iPython console, which - in the default view of the Spyder IDE - is in the bottom right corner. After each command, hit enter to run. You should see a message that tells you the status of the installation, and you may be instructed to restart the kernel. You can restart the kernel using the shortcut key `Ctrl` + `.` on Windows, `Cmd` + `.` on a Mac, or by selecting it from the hamburger menu at the top right of the iPython console window.
 
-<img src="../assets/img/tmpython/py-restart-kernel.png" width="50%">
+<img src="../assets/img/tmpython/py-restart-kernel.png" alt="Screenshot of the Spyder IDE showing where to find the `Remove all variables` button - at the top right with the three line icon" width="50%">
 
 * Install SpaCy to preprocess the text data<br>
 `pip install spacy`
@@ -53,7 +53,7 @@ Type (or copy-paste) each of the commands below in the iPython console, which - 
 * Install pyLDAvis to create a visualization of the topics<br>
 `pip install pyLDAvis`
 
-<img src="../assets/img/tmpython/py-install-libs.png" width="100%">
+<img src="../assets/img/tmpython/py-install-libs.png" alt="image of the interactive Python console, with the command 'pip install pyLDavis' written in" width="100%">
 
 ## 2. Import internal and external libraries (i.e. dependencies) {#step2}
 Now, we will start writing our script in the Spyder editor (left pane in the default interface). Our first step is to import the libraries we just installed to let the console know that we require them. We will highlight when we use the various libraries in our code to give you a sense of where they fit in to the picture!
@@ -84,7 +84,7 @@ You will note in the code above there is the option of working with texts in lan
 
 If you have not saved the script yet, go ahead and do so. Make a note of where you are saving the script, because you will need to save your text data relative to where the script is located as described below.
 
-<img src="../assets/img/tmpython/py-import.png" width="65%">
+<img src="../assets/img/tmpython/py-import.png" alt="image of the 'topic-model.py' file with all the import code shown above" width="65%">
 
 ## 3. Read the files containing the text data {#step3}
 Our next step is to load our text files in a manner that they can be used; i.e. storing them in a list data structure in Python. We will employ [the `glob` library](https://docs.python.org/3/library/glob.html) we imported in the previous step. The `glob` library allows us to grab the contents of a directory using pattern matching.
@@ -113,7 +113,7 @@ for filename in file_list:
 print(texts[0]) # print the first .txt file in the list to confirm
 ```
 
-<img src="../assets/img/tmpython/py-glob.png" width="100%">
+<img src="../assets/img/tmpython/py-glob.png" alt="screenshot of the code above written in the Python file" width="100%">
 
 You will likely need to adjust the encoding value, based on the encoding of your text files. You can look up how to specify other encodings in Python using the [Standard Encodings table](https://docs.python.org/3/library/codecs.html#standard-encodings); the value to replace in your script can be found in the "Codec" column of the table (e.g. `'mac-roman'`, `'latin-1'`). 
 
@@ -244,7 +244,7 @@ data_bigrams_trigrams = make_trigrams(data_bigrams)
 
 After running the block of code above (`F9`), the variable "data_bigrams_trigrams" will appear in the Variable Explorer pane, where you can inspect the contents of the variable. Alternatively, you can uncomment the last line of the code (i.e. remove the "#" symbol in front of the "print" statement) and print out the list of terms in the console window. 
 
-<img src="../assets/img/tmpython/py-bigrams.png" width="100%">
+<img src="../assets/img/tmpython/py-bigrams.png" alt="a screenshot of the values inside the 'data_bigrams_trigrams' variable -- it contains values such as oil_gas, billion_dollar, and capital_investment " width="100%">
 
 ## 8. Create a dictionary of words used in the corpus {#step8}
 
