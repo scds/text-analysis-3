@@ -1,8 +1,7 @@
 ---
 layout: default
-title: What is Topic Modeling?
-parent: Lesson
-nav_order: 1
+title: Overview
+nav_order: 3
 ---
 
 # What is Topic Modeling?
@@ -15,7 +14,7 @@ Term frequency counts are also less helpful without context. Even if "board" is 
 
 Topic modeling adds nuance by grouping terms (words) that appear in the text together to a greater degree than others; essentially, topic modeling creates a context in which to understand the term(s). Or, put another way:
 
-> “A topic can be thought of as the cluster of words that tend to come up in a discussion and therefore to co-occur more frequently than they otherwise would, whenever the topic is being discussed.” (Ignatow & Mihalcea, 2) [1](#1)
+> “A topic can be thought of as the cluster of words that tend to come up in a discussion and therefore to co-occur more frequently than they otherwise would, whenever the topic is being discussed.” (Ignatow & Mihalcea, 2) [^1]
 
 ## Topic modeling in practice
 
@@ -23,7 +22,7 @@ Topic modeling can be an elusive concept to grasp relative to other text analysi
 
 There will be a demo corpus already loaded that you can experiment with. Try changing the number of topics -- as too many topics can lead to overlap, and too few can make the clusters overly general -- then running a few iterations, which refines the model.
 
-![Screenshot of Mimno's jsLDA interface with topics as described in the next paragraph](assets/img/mimno-eg.png)
+<img src="assets/img/overview/mimno-eg.png" alt="Screenshot of Mimno's jsLDA interface with topics as described in the next paragraph" width="100%">
 
 Your topics may differ! But you may note a coherence within clusters of words, or topics, such as:
 * economic trade foreign production business policy agriculture farm economy international
@@ -40,16 +39,16 @@ It may be clear from our results with Mimno's tool that it would be difficult if
 
 ## How topic modeling works
 
-Numerous explanatory articles written on topic modeling have been written by Digital Humanities scholars, including David Blei's "[Probabilistic Topic Models](https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)," Graham, Weingart and Milligan's "[Getting Started with Topic Modeling and MALLET](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)" and Ted Underwood's "[Topic Modeling Made Just Simple Enough](https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)" (from which the explanation provided below borrows). They are great resources if you are new to the idea of topic modeling and would like to know more about how it works, as we will only briefly discuss it here in relation to the tasks we will be performing in the lesson. [2](#2)
+Numerous explanatory articles written on topic modeling have been written by Digital Humanities scholars, including David Blei's "[Probabilistic Topic Models](https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf)," Graham, Weingart and Milligan's "[Getting Started with Topic Modeling and MALLET](https://programminghistorian.org/en/lessons/topic-modeling-and-mallet)" and Ted Underwood's "[Topic Modeling Made Just Simple Enough](https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)" (from which the explanation provided below borrows). They are great resources if you are new to the idea of topic modeling and would like to know more about how it works, as we will only briefly discuss it here in relation to the tasks we will be performing in the lesson. [^2]
 
 The overall premise of topic modeling is perhaps most succinctly captured by Graham, Weingart and Milligan: 
 
-> \[Topic modeling programs] assume that any piece of text is composed (by an author) by selecting words from possible baskets of words where
+> \[Topic modeling programs\] assume that any piece of text is composed (by an author) by selecting words from possible baskets of words where
 > each basket corresponds to a topic. If that is true, then it becomes possible to mathematically decompose a text into the probable baskets
 > from whence the words first came. The tool goes through this process over and over again until it settles on the most likely distribution
 > of words into baskets, which we call topics.
 
-Topics "can be understood as a collection of words that have different probabilities of appearance in passages discussing the topic" (Underwood) [3](#3). But how does a topic modeling tool arrive at the topics it presents?
+Topics "can be understood as a collection of words that have different probabilities of appearance in passages discussing the topic" (Underwood) [^3]. But how does a topic modeling tool arrive at the topics it presents?
 
 Typically, the topic modeling workflow begins by creating dictionary of all words in the corpus so that the number of times each word appears (term frequency) can be weighted against the term frequency of other words. The topic modeling tool or program then splits the text data into segments of equal length, and counts the occurrence of terms within the segment. 
 
@@ -57,7 +56,7 @@ Each segment is presumed to contain approximately one topic, though the topic is
 
 The screenshot below is from the [help documentation for Voyant Tools](https://voyant-tools.org/docs/#!/guide/topics), showing the distribution of topics across the works of Jane Austen. For example, the topic "good mrs bingley bennet daughters girls having woman town fine" is most prevalent - unsurprisingly - in *Pride and Predjudice* (1813) as shown in the visualization on the right. But it also appears in each of the other texts as well. Not all terms will appear in each segment containing the topic, but there is a higher probability that a term from the topic will appear when the topic is discussed. The term "bennet" likely does not occur in Austen texts that are not *Pride and Predjudice* but some of the other terms from the topic - such as "good," "having," and "town" - will be present. 
 
-![Screenshot showing a color-coded visualization of topics as they are distributed across Love and Friendship, Lady Susan, Sense and Sensibility and Pride and Prejudice; each text contains each of the 10 topics to a greater or lesser extent](assets/img/topic-distribution-Voyant.png)
+<img src="assets/img/overview/topic-distribution-Voyant.png" alt="Screenshot showing a color-coded visualization of topics as they are distributed across Love and Friendship, Lady Susan, Sense and Sensibility and Pride and Prejudice; each text contains each of the 10 topics to a greater or lesser extent" width="100%">
 
 Topics, then, should be interpreted holistically - and they do require human interpretation! You might find it useful to name your topics based on clusters of related terms in the topic; for example, "workers," "wage," "strike" might constitute a topic that you interpret as labour organizing. Some topics will have a strong sense of semantic coherence, others may be a meaningless jumble of words.  
 
@@ -67,16 +66,8 @@ Each topic technically contains every term from the dictionary - all unique word
 
 As you work through the lesson, consider how the process described above maps to the steps and features in the various tools you will be using - and have fun topic modeling!
 
-<hr />
-
 ## References
 
-<a id="1">\[1] </a>Ignatow, G., & Mihalcea, R. (2018). *An introduction to text mining : research design, data collection, and analysis.* SAGE Publications, Inc.
-
-<a id="2">\[2] </a>Graham, S., Weingart, S., & Milligan, I. (2012). Getting started with topic modeling and MALLET. *Programming Historian.* https://programminghistorian.org/en/lessons/topic-modeling-and-mallet.
-
-<a id="3">\[3] </a>Underwood, T. (2012). Topic modeling made just simple enough. *Using large digital libraries to advance literary history*. https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/.
-
-<br />
-
-Next --> [Topic Modeling with Voyant Tools](tmv.html)
+[^1]: Ignatow, G., & Mihalcea, R. (2018). *An introduction to text mining : research design, data collection, and analysis.* SAGE Publications, Inc.
+[^2]: Graham, S., Weingart, S., & Milligan, I. (2012). Getting started with topic modeling and MALLET. *Programming Historian.* <https://programminghistorian.org/en/lessons/topic-modeling-and-mallet>.
+[^3]: Underwood, T. (2012). Topic modeling made just simple enough. *Using large digital libraries to advance literary history*. <https://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/>.

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Behind the Interface
-nav_order: 4
+nav_order: 5
 ---
 
 # Behind the Interface: Layers of Bias Hidden in Machine Learning
