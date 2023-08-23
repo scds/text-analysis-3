@@ -314,10 +314,10 @@ lda_model.show_topics()
 
 Select the lines of code above and run the using the `F9` key. It should output a list of topics: clusters of words with their respective weights.
 
-<img src="../assets/img/tmpython/py-print-topics.png" alt="a screenshot of the values output by the lda_model.show_topics() line" width="100%">
-
 {: .warning}
 > If you are not using Spyder via Anaconda, you may need to use `print(lda_model.show_topics())` instead of `lda_model.show_topics()` if you do not get any output from running the lines above. 
+
+<img src="../assets/img/tmpython/py-print-topics.png" alt="a screenshot of the values output by the lda_model.show_topics() line" width="100%">
 
 The first time you run the code will be similar to a round of exploratory data analysis: you might find some interesting results but you are more likely to observe areas for improvement in your preprocessing steps. For example, do you need to go back to step 4. to remove some additional stopwords? Or do you have a lot of noise in the form of shorter terms, which can be addressed in step 6 with `min_len` in Gensim. Make your adjustments, and run the code from the beginning (`F5`).
 
