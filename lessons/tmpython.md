@@ -11,6 +11,9 @@ Our third tool for topic modeling is the Python programming language. The lesson
 
 You can compare the results that you get from running the script in Jupyter Notebooks on your corpus subset with your results from MALLET and Voyant. If you get the richest and most coherent topics in Python, that is the tool you will want to work with for you full corpus. You may even wish to compare results between Jupyter Notebooks and the Spyder IDE, as outlined below.
 
+{: .note}
+> A reminder that using [the corpus containing ~10% excerpts of the political platforms](../assets/excerpt-corpus.zip) will yield more varied and interesting topics than the full documents, as topic modeling works better with shorter texts.
+
 ## Topic Modeling with Python
 
 The following video demonstrates each of the steps outlined below in text.
@@ -97,6 +100,9 @@ The script will also work with a single text file in the "corpus" folder.
 
 {: .important}
 > Step 3 is slightly different depending on your operating system. If you are running the script on a Mac (or Bash shell), uncomment the first "file_list" variable assignment statement below. If you are running the script on a Windows OS, uncomment the second of the statements and update "\[path to folder]" to the pathname of the "corpus" folder. To find the pathname: open a File Explorer window, navigate to the corpus folder and copy the path in the address bar.
+> To uncomment a line of code, remove the hash symbol ("#") from the beginning of the line.
+
+In the script, after the lines of code you wrote in Step 2. above, copy / paste or type in:
 
 ```py
 # Read files from directory and create list from contents
@@ -130,7 +136,7 @@ Stopwords are commonly used words - such as "and," "the," "we" and... well, "as"
 
 What constitutes a stopword will vary depending on your corpus and what you are seeking in your analysis. You may find it easiest to run through most of the script, up to creating the topics in [Step 9](#9-create-topics-in-gensim), and then coming back to this step to refine your stopwords. If you already know some of the stopwords you would like to remove from an initial data analysis step (i.e. if you [created topics in Voyant](tmv.html), however, you can add them now.
 
-Most of the code below is commented out, i.e. preceded by `#`. To add stopwords to the list, remove the `#` and substitute `[word]` with your word (ensure that you leave in the single quotes to denote that you are entering string data). Uncomment - remove the `#` - before the second `print(STOP_WORDS)` in the code to verify your work.
+Most of the code below is commented out, i.e. preceded by `#`. To add stopwords to the list, remove the `#` and substitute `word` with your word (ensure that you leave in the single quotes to denote that you are entering string data, e.g. `'ignity'`). Uncomment - remove the `#` - before the second `print(STOP_WORDS)` in the code to verify your work.
 
 ```py
 # Print the initial set of stopwords from SpaCy
@@ -138,14 +144,14 @@ Most of the code below is commented out, i.e. preceded by `#`. To add stopwords 
 print(STOP_WORDS)
 
 # Add a word to remove or add from the list
-# STOP_WORDS.add('[word]') 
-# STOP_WORDS.remove('[word]')
+# STOP_WORDS.add('word') 
+# STOP_WORDS.remove('word')
 
 # Print to confirm that your word has been added or removed
 # print(STOP_WORDS)
 ```
 
-Again, use the `F5` key to run the script in the console.
+Again, use the `F5` key to run the script in the console. The removed word will not neccessarily appear at the end of the list but there should be one additional word in the STOP_WORDS variable (it might take a bit of searching but your word will be in the list).
 
 ## 5. Tokenize and lemmatize text data, and remove stopwords {#step5}
 
@@ -306,7 +312,14 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 lda_model.show_topics()
 ```
 
-Select the lines of code above and run the using the `F9` key. The first time you run the code will be similar to a round of exploratory data analysis: you might find some interesting results but you are more likely to observe areas for improvement in your preprocessing steps. For example, do you need to go back to step 4. to remove some additional stopwords? Or do you have a lot of noise in the form of shorter terms, which can be addressed in step 6 with `min_len` in Gensim. Make your adjustments, and run the code from the beginning (`F5`).
+Select the lines of code above and run the using the `F9` key. It should output a list of topics: clusters of words with their respective weights.
+
+<img src="../assets/img/tmpython/py-print-topics.png" alt="a screenshot of the values output by the lda_model.show_topics() line" width="100%">
+
+{: .warning}
+> If you are not using Spyder via Anaconda, you may need to use `print(lda_model.show_topics())` instead of `lda_model.show_topics()` if you do not get any output from running the lines above. 
+
+The first time you run the code will be similar to a round of exploratory data analysis: you might find some interesting results but you are more likely to observe areas for improvement in your preprocessing steps. For example, do you need to go back to step 4. to remove some additional stopwords? Or do you have a lot of noise in the form of shorter terms, which can be addressed in step 6 with `min_len` in Gensim. Make your adjustments, and run the code from the beginning (`F5`).
 
 ## 11. Create topic modeling visualization with LDAvis {#step11}
 
