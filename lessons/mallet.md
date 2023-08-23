@@ -40,6 +40,9 @@ Mac OS
 Windows OS
 : `bin\mallet train-topics --input *filename*.mallet --num-topics *n* --num-top-words *n* --output-topic-keys *filename1*.txt --output-doc-topics *filename2*.txt`
 
+{: .note }
+> For your sample data, using the [corpus containing ~10% excerpts of the political platforms](../assets/excerpt-corpus.zip) will yield more varied and interesting topics than the full documents, as topic modeling works better with shorter texts.
+
 ## Try it with your data: Creating a custom stopword list
 
 If you think MALLET might be your topic modeling tool of choice, you likely will also find it helpful to add your own stopwords to the default list. In the video, for example, "it's" appeared in one of the topics. As with any stopword list, there are bound to be some missed terms that you will discover when you start modeling topics; you might also have corpus-specific terms that you would like to ignore without making permanent changes to the list that MALLET uses.
