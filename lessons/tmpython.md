@@ -12,7 +12,7 @@ Our third tool for topic modeling is the Python programming language. The lesson
 You can compare the results that you get from running the script in Jupyter Notebooks on your corpus subset with your results from MALLET and Voyant. If you get the richest and most coherent topics in Python, that is the tool you will want to work with for you full corpus. You may even wish to compare results between Jupyter Notebooks and the Spyder IDE, as outlined below.
 
 {: .note}
-> A reminder that using [the corpus containing ~10% excerpts of the political platforms](../assets/excerpt-corpus.zip) as your sample data will yield more varied and interesting topics than the full documents, as topic modeling works better with shorter texts.
+> A reminder that using [the corpus containing ~10% excerpts of the political platforms](../assets/excerpt-corpus.zip) as your sample data will yield more varied and interesting topics than the full documents you downloaded from Voyant.
 
 ## Topic Modeling with Python
 
