@@ -311,10 +311,11 @@ lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
 # Print topics
 lda_model.show_topics()
 ```
-{: .warning}
-> If you are not using the Spyder IDE via Anaconda, you may need to replace `lda_model.show_topics()` with `print(lda_model.show_topics())` if you do not get any output from running the lines above.
 
 Select the lines of code above and run the using the `F9` key. It should output a list of topics: clusters of words with their respective weights.
+
+{: .warning}
+> If you are not using the Spyder IDE via Anaconda, you may need to replace `lda_model.show_topics()` with `print(lda_model.show_topics())` if you do not get any output from running the lines above.
 
 <img src="../assets/img/tmpython/py-print-topics.png" alt="a screenshot of the values output by the lda_model.show_topics() line" width="100%">
 
