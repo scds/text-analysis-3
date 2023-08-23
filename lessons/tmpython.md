@@ -184,7 +184,7 @@ print(lemmatized_texts[0][0:90]) # Print results to verify; you can also check t
 ```
 
 {: .note}
-> There is a maxium of one million characters in the default nlp pipeline; if you try to run with script on text data with more than one million characters, you will get an error to that effect. The one million character threshold is based on (anticipated) available RAM.*
+> There is a maximum of one million characters in the default nlp pipeline; if you try to run with script on text data with more than one million characters, you will get an error to that effect. The one million character threshold is based on (anticipated) available RAM.*
 
 **If you get a max character error** (and only if), you can change the maximum number of characters using nlp.max_length as below:
 
