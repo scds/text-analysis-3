@@ -22,6 +22,7 @@ In this workshop, we will introduce topic modeling using three different computa
 
 ## Prerequisites
 * Basic computer literacy (creating and working with different file types, navigating interfaces, using shortcut keys and so on)
+* If you are newer to Python programming, the [Identifying Proper Nouns with Named Entity Recognition](https://scds.github.io/text-analysis-2/) module introduces using Python for text analysis in Anaconda and so, may be helpful to complete first 
 
 ## Learning Objectives
 By the end of the workshop, you will be able to:
